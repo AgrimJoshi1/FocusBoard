@@ -2,33 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login - FocusBoard</title>
-    <link rel="stylesheet" href="login.css">
-
-    
+    <title>Create Account - FocusBoard</title>
+    <link rel="stylesheet" href="/Create/Create.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
 <video autoplay muted loop id="bg-video">
-    <source src="../Get-Started/additional/BGVID.webm" type="video/webm">
+    <source src="/Get-Started/additional/BGVID.webm" type="video/webm">
 </video>
 
 <div class="login-container">
     <div class="login-box">
-        <h2>Welcome Back</h2>
-        <p class="subtitle">Login to continue</p>
 
-        <form id="login-form">
+        <h2>Create Account</h2>
+        <p class="subtitle">Join FocusBoard</p>
+
+        <form id="create-form">
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
 
-            <button type="submit">Login</button>
+            <button type="submit">Create Account</button>
         </form>
 
-        <p class="extra">Don't have an account? <a href="/Create/Create.html">Sign Up</a></p>
+        <p class="extra">
+            Already have an account? <a href="/Login/login.html">Login</a>
+        </p>
+
     </div>
 </div>
+
 </body>
 </html>
