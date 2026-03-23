@@ -19,7 +19,7 @@ form.addEventListener("submit", function(e) {
         // Save current user session
         localStorage.setItem("currentUser", JSON.stringify(validUser));
 
-        window.location.href = "dashboard.html";
+        window.location.href = "/Home/home.html";
     } else {
         alert("Invalid username or password");
     }
