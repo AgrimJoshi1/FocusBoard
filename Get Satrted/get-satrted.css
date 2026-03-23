@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #7B61FF;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Bitcount';
+    src: url('Bitcount_Grid_Double_Ink/BitcountGridDoubleInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf') format('truetype');
+}

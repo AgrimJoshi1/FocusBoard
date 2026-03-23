@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FocusBoard</title>
+    <link rel="stylesheet" href="get-satrted.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<video autoplay muted loop id="bg-video">
+    <source src="additional/GET-STARTED-BG-VEDIO.webm" type="video/webm">
+</video>
+
+<div class="container">
+    <h1>
+  <span id="f-letter">F</span>ocus
+  <span id="b-letter">B</span>oard
+    </h1>
+    <p>Organize your tasks. Stay focused.</p>
+    <a href="../Login/login.html"><button>Get Started</button></a>
+</div>
+
+<script>
+const f = document.getElementById("f-letter");
+const b = document.getElementById("b-letter");
+
+let toggle = true;
+
+setInterval(() => {
+    if (toggle) {
+        f.style.fontFamily = "Roboto, sans-serif";
+        b.style.fontFamily = "Roboto, sans-serif";
+    } else {
+        f.style.fontFamily = "Bitcount";
+        b.style.fontFamily = "Bitcount";
+    }
+    toggle = !toggle;
+}, 1000);
+</script>
+
+</body>
+</html>
