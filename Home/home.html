@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FocusBoard - Home</title>
+    <link rel="stylesheet" href="home.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- Top Bar -->
+<div class="topbar">
+    <h2>FocusBoard</h2>
+    <button id="logout">Logout</button>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Add Task -->
+    <div class="add-task">
+        <input type="text" id="task-input" placeholder="Enter a task...">
+        <button id="add-btn">Add</button>
+    </div>
+
+    <!-- Task List -->
+    <div id="task-list"></div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
 </body>
 </html>
