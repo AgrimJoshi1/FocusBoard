@@ -79,7 +79,7 @@ input:checked + .slider::before {
 /* HERO */
 .hero {
     min-height: 60vh;
-    background: url('/Get-Started/additional/BGIMG.png') center/cover;
+    background: url('/Get-Started/additional/BIGVID1.png') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,4 +204,102 @@ input:checked + .slider::before {
 .nav-right a:hover,
 .nav-right button:hover {
     transform: scale(1.08);
+}
+
+/* SUBSCRIPTION SECTION */
+.subscription {
+    padding: 60px 40px;
+    text-align: center;
+    margin: 60px;
+}
+
+.subscription h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* PLANS */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+/* CARD */
+.plan-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    
+}
+
+/* HOVER EFFECT */
+.plan-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
+}
+
+
+/* PRICE */
+.price {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* LIST */
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-card li {
+    margin: 10px 0;
+}
+
+/* BUTTON */
+.plan-card button {
+    padding: 10px 20px;
+    background: #7B61FF;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.plan-card button:hover {
+    background: #5a47d6;
+    transform: translateY(-2px);
+}
+
+.plan-card {
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    width: 320px;
+    min-height: 420px;   
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;              
+    flex-direction: column;
+    justify-content: space-between;  
+    transition: all 0.3s ease;
+    
+}
+
+/* HIGHLIGHT (PRO PLAN) */
+.highlight {
+    border: 1px solid #7B61FF;
+    background: rgba(123, 97, 255, 0.1);
 }
