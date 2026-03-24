@@ -37,11 +37,11 @@ body {
     border: none;
     padding: 8px 15px;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-/* TOGGLE SWITCH */
+/* TOGGLE */
 .switch {
     position: relative;
     width: 40px;
@@ -78,7 +78,7 @@ input:checked + .slider::before {
 
 /* HERO */
 .hero {
-    height: 60vh;
+    min-height: 60vh;
     background: url('/Get-Started/additional/BGIMG.png') center/cover;
     display: flex;
     justify-content: center;
@@ -87,7 +87,7 @@ input:checked + .slider::before {
 }
 
 .hero-content {
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.9);
     padding: 30px;
     border-radius: 10px;
 }
@@ -98,20 +98,9 @@ input:checked + .slider::before {
     background: #7B61FF;
     border: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
-/* TOOLS */
-/* TOOLS */
-.tools {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    text-align: center;
-}
-
-/* TOOL BOX */
 /* TOOLS */
 .tools {
     padding: 40px;
@@ -120,7 +109,6 @@ input:checked + .slider::before {
     gap: 25px;
 }
 
-/* TOOL BOX */
 .tool-box {
     width: 100%;
     background: rgba(255,255,255,0.08);
@@ -128,10 +116,8 @@ input:checked + .slider::before {
     border-radius: 15px;
     padding: 25px;
     min-height: 500px;
-
     display: flex;
     flex-direction: column;
-
     transition: 0.3s;
 }
 
@@ -139,38 +125,15 @@ input:checked + .slider::before {
     transform: translateY(-3px);
 }
 
-/* TITLE */
 .tool-box h3 {
     margin-bottom: 15px;
 }
 
-/* CONTENT */
 .tool-content {
     flex-grow: 1;
 }
-/* TITLE */
-.tool-box h3 {
-    margin-bottom: 15px;
-}
 
-/* CONTENT AREA */
-.tool-content {
-    flex-grow: 1;
-    width: 100%;
-}
-/* FOOTER */
-.footer-top {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-    background: #111;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 15px;
-    background: #000;
-}
+/* TASK INPUT */
 .task-input {
     display: flex;
     gap: 10px;
@@ -180,7 +143,7 @@ input:checked + .slider::before {
 .task-input input {
     flex: 1;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
     outline: none;
 }
@@ -190,50 +153,55 @@ input:checked + .slider::before {
     background: #7B61FF;
     border: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
+/* TASK LIST */
 #taskList {
     list-style: none;
     padding: 0;
+    margin-top: 15px;
 }
 
 #taskList li {
-    background: rgba(255,255,255,0.08);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-#taskList li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255,255,255,0.06);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.2s;
 }
-.task-text {
+
+#taskList li:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+#taskList span {
     flex: 1;
 }
+
 .completed {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
-.delete-btn {
-    background: red;
+#taskList button {
+    background: transparent;
     border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: #ff4d4d;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* timer*/
+/* TIMER */
 #minutesInput {
     padding: 10px;
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
 }
 
@@ -254,29 +222,25 @@ input:checked + .slider::before {
     background: #7B61FF;
     border: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-/*NOTES*/
-#notesInput {
-    width: 95%;
-    height: 400px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    resize: none;
-    margin-bottom: 10px;
+/* TIMER TASK LIST */
+#taskTimerList {
+    margin-top: 20px;
 }
 
-#clearNotesBtn {
+.timer-task {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
     padding: 10px;
-    background: red;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    margin-bottom: 8px;
 }
+
+/* NOTES */
 #notesTabs {
     display: flex;
     gap: 10px;
@@ -301,4 +265,68 @@ input:checked + .slider::before {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#notesInput {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#clearNotesBtn {
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 🔥 ANALYTICS TABLE (FINAL FIX) */
+#analyticsList {
+    margin-top: 15px;
+}
+
+.analytics-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 10px 5px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.analytics-row.header {
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.analytics-row span {
+    padding: 5px;
+}
+
+/* STATUS COLORS */
+.status-done {
+    color: #4caf50;
+}
+
+.status-pending {
+    color: #ff9800;
+}
+
+/* FOOTER */
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #111;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #000;
 }

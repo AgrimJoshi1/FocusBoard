@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FocusBoard</title>
-    <link rel="stylesheet" href="/Product/product.css">
 
+    <link rel="stylesheet" href="./product.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -42,53 +44,70 @@
 <section class="tools">
     <h2>Tools</h2>
 
-<div class="tool-box">
-    <h3>Task Manager</h3>
-    <div class="tool-content">
-        <div class="task-input">
-            <input type="text" id="taskInput" placeholder="Enter a task...">
-            <button id="addTaskBtn">Add</button>
-        </div>
-        <ul id="taskList"></ul>
-    </div>
-</div>
-
-<div class="tool-box">
-    <h3>Timer</h3>
-    <div class="tool-content">
-        <input type="number" id="minutesInput" placeholder="Enter minutes" min="0">
-        <div id="timerDisplay">00:00</div>
-        <div class="timer-buttons">
-            <button id="startBtn">Start</button>
-            <button id="pauseBtn">Pause</button>
-            <button id="resetBtn">Reset</button>
+    <!-- TASK MANAGER -->
+    <div class="tool-box">
+        <h3>Task Manager</h3>
+        <div class="tool-content">
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="Enter a task...">
+                <button id="addTaskBtn">Add</button>
+            </div>
+            <ul id="taskList"></ul>
         </div>
     </div>
-</div>
 
-<div class="tool-box">
-    <h3>Notes</h3>
-    <div class="tool-content">
-        <!-- Tabs -->
-        <div id="notesTabs">
-            <button id="addNoteBtn">＋</button>
+    <!-- TIMER + TASK TRACKING -->
+    <div class="tool-box">
+        <h3>Focus Tracker</h3>
+        <div class="tool-content">
+
+            <input type="number" id="minutesInput" placeholder="Enter minutes">
+
+            <div id="timerDisplay">00:00</div>
+
+            <div class="timer-buttons">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+            <!-- Task Time UI -->
+            <div id="taskTimerList"></div>
+
         </div>
-        <!-- Active Note -->
-        <textarea id="notesInput" placeholder="Write your notes..."></textarea>
-
-        <button id="clearNotesBtn">Delete Current Note</button>
     </div>
-</div>
 
+    <!-- NOTES -->
+    <div class="tool-box">
+        <h3>Notes</h3>
+        <div class="tool-content">
+
+            <div id="notesTabs">
+                <button id="addNoteBtn">＋</button>
+            </div>
+
+            <textarea id="notesInput" placeholder="Write your notes..."></textarea>
+
+            <button id="clearNotesBtn">Delete Current Note</button>
+        </div>
+    </div>
+
+    <!-- ANALYTICS -->
     <div class="tool-box">
         <h3>Analytics</h3>
         <div class="tool-content">
-            <p>Track your productivity stats.</p>
+
+            <p id="taskStats">Tasks: 0/0</p>
+
+            <!-- 🔥 Task Breakdown -->
+            <div id="analyticsList"></div>
+
         </div>
     </div>
+
 </section>
 
-<!-- FOOTER 1 -->
+<!-- FOOTER -->
 <div class="footer-top">
     <div>
         <h4>Company</h4>
@@ -116,11 +135,11 @@
     </div>
 </div>
 
-<!-- FOOTER 2 (MAIN FOOTER) -->
 <footer class="footer-bottom">
     <p>© 2026 FocusBoard. All rights reserved.</p>
 </footer>
 
 <script src="product.js"></script>
+
 </body>
 </html>
