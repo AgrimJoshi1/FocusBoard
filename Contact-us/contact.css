@@ -282,4 +282,5 @@ input:checked + .slider::before {
 .contact-form-container {
     width: 100%;
     max-width: 700px;
+    background: rgba(0, 0, 0, 1); /* black with 50% opacity */
 }
