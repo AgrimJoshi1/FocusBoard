@@ -2,33 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FocusBoard - Home</title>
-    <link rel="stylesheet" href="home.css">
+    <title>FocusBoard</title>
+    <link rel="stylesheet" href="/Home/home.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-    <h2>FocusBoard</h2>
-    <button id="logout">Logout</button>
-</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <h2>FocusBoard</h2>
 
-<!-- Main Content -->
-<div class="container">
-
-    <!-- Add Task -->
-    <div class="add-task">
-        <input type="text" id="task-input" placeholder="Enter a task...">
-        <button id="add-btn">Add</button>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
     </div>
 
-    <!-- Task List -->
-    <div id="task-list"></div>
+    <div class="nav-right">
+        <a href="#">Home</a>
+        <a href="#">Subscription</a>
+        <a href="#">Tools</a>
+        <a href="#">Contact</a>
+        <button id="logout">Logout</button>
+    </div>
+</nav>
 
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Stay Focused. Stay Ahead.</h1>
+        <p>Manage your tasks, boost productivity, and achieve your goals.</p>
+        <button>Get Started</button>
+    </div>
+</section>
+
+<!--  -->
+<section class="content">
+    
+</section>
+
+<!-- FOOTER 1 -->
+<div class="footer-top">
+    <div>
+        <h4>Company</h4>
+        <p>Contact Us</p>
+        <p>About</p>
+    </div>
+
+    <div>
+        <h4>Tools</h4>
+        <p>Task Manager</p>
+        <p>Timer</p>
+        <p>Notes</p>
+    </div>
+
+    <div>
+        <h4>Info</h4>
+        <p>Privacy</p>
+        <p>Terms</p>
+    </div>
+
+    <div>
+        <h4>Social</h4>
+        <p>Instagram</p>
+        <p>Twitter</p>
+    </div>
 </div>
 
-<script src="js/dashboard.js"></script>
+<!-- FOOTER 2 (MAIN FOOTER) -->
+<footer class="footer-bottom">
+    <p>© 2026 FocusBoard. All rights reserved.</p>
+</footer>
+
+<script src="/Home/home.js"></script>
 </body>
 </html>
