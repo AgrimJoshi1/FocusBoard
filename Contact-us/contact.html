@@ -27,7 +27,9 @@
         <a href="/Subcription/sub.html">Subscription</a>
         <a href="/Product/product.html">Tools</a>
         <a href="/Contact-us/contact.html">Contact</a>
-        <a href="/Login/login.html"><button id="logout">Logout</button></a>
+        <a href="/Login/login.html">
+            <button id="logout">Logout</button>
+        </a>
     </div>
 </nav>
 
@@ -36,16 +38,34 @@
     <div class="hero-content">
         <h1>Let’s Get in Touch</h1>
         <p>Whether you have a question or just want to say hello, we’re always ready to hear from you.</p>
-        <a href="#content"><button>Get Started</button></a>
+        <a href="#content">
+            <button>Get Started</button>
+        </a>
     </div>
 </section>
 
-<!-- 🔥 MAIN CONTENT AREA (REUSABLE) -->
+<!-- MAIN CONTENT -->
 <main id="content" class="page-content">
-    <!-- Put your page content here -->
 
-    <h2 style="text-align:center;">Your Content Here</h2>
-    <p style="text-align:center;">Replace this with anything (forms, cards, etc.)</p>
+    <div class="contact-form-container">
+        <h2>
+            COMPLETE THE FORM BELOW, AND ONE OF OUR SALES CONSULTANTS WILL BE IN TOUCH WITH YOU.
+        </h2>
+
+        <form class="contact-form">
+
+            <div class="row">
+                <input type="text" placeholder="FIRST NAME" required>
+                <input type="text" placeholder="LAST NAME" required>
+            </div>
+
+            <input type="email" placeholder="EMAIL ADDRESS" required>
+            <input type="tel" placeholder="PHONE NUMBER" required>
+
+            <button type="submit">NEXT</button>
+
+        </form>
+    </div>
 
 </main>
 

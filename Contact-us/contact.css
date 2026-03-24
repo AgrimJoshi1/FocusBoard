@@ -205,3 +205,81 @@ input:checked + .slider::before {
 .nav-right button:hover {
     transform: scale(1.08);
 }
+
+/* CONTACT FORM */
+.contact-form-container {
+    max-width: 700px;
+    padding: 80px;
+    background: #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-form-container h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form input::placeholder {
+    color: #888;
+}
+
+.contact-form input:focus {
+    border-bottom: 1px solid #7B61FF;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #7B61FF; /* golden color like image */
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #7B61FF;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    transform: scale(0.96);
+}
+
+.page-content {
+    display: flex;
+    justify-content: center;   
+    align-items: center;     
+    min-height: 70vh;        
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 700px;
+}
