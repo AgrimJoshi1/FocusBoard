@@ -371,3 +371,134 @@ input:checked + .slider::before {
     position: relative;
     z-index: 2;
 }
+
+/* Default dark mode hover */
+.nav-right a:hover {
+    color: #7B61FF;
+    border: none;
+}
+
+
+
+/* Entire switch clickable */
+.switch {
+    cursor: pointer;
+}
+
+/* Also ensure slider shows pointer */
+.slider {
+    cursor: pointer;
+}
+
+.hero-content {
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-content:hover {
+    transform: scale(1.05);
+}
+.hero button {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Hover */
+.hero button:hover {
+    background: #5a47d6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
+}
+
+/* Click effect */
+.hero button:active {
+    transform: scale(0.95);
+}
+
+.footer-top > div {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-top > div:hover {
+    transform: translateY(-5px);
+}
+
+.footer-top p {
+    color: #777;
+    margin: 5px 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* Hover on individual items */
+.footer-top p:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+/* TOOL BOX BASE */
+.tool-box {
+    background: rgba(255,255,255,0.05);
+    margin: 20px auto;
+    padding: 25px;
+    width: 93%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+/* MAIN HOVER EFFECT */
+.tool-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
+}
+
+/* TITLE EFFECT */
+.tool-box h3 {
+    transition: 0.3s;
+}
+
+.tool-box:hover h3 {
+    color: #7B61FF;
+}
+
+/* INPUT + TEXTAREA FOCUS */
+.tool-box input,
+.tool-box textarea {
+    transition: 0.2s;
+}
+
+.tool-box input:focus,
+.tool-box textarea:focus {
+    outline: 2px solid #7B61FF;
+    background: rgba(255,255,255,0.1);
+}
+
+/* BUTTON EFFECTS */
+.tool-box button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tool-box button:hover {
+    background: #5a47d6;
+    transform: translateY(-1px);
+}
+
+.tool-box button:active {
+    transform: scale(0.95);
+}
+
+/* Smooth transition */
+.nav-right a,
+.nav-right button {
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.nav-right a:hover,
+.nav-right button:hover {
+    transform: scale(1.08);
+}
