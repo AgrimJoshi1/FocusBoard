@@ -210,7 +210,8 @@ input:checked + .slider::before {
 .subscription {
     padding: 60px 40px;
     text-align: center;
-    margin: 60px;
+    min-height: 50vh;
+    
 }
 
 .subscription h1 {
@@ -303,3 +304,20 @@ input:checked + .slider::before {
     border: 1px solid #7B61FF;
     background: rgba(123, 97, 255, 0.1);
 }
+
+.subscription {
+    position: relative;  /* VERY IMPORTANT */
+    overflow: hidden;    /* hides overflow */
+}
+
+.subscription > *:not(.bg-video) {
+    position: relative;
+    z-index: 2;
+}
+.bg-video {
+    opacity: 0.2;
+}
+
+
+
+
