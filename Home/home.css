@@ -79,7 +79,7 @@ input:checked + .slider::before {
 /* HERO */
 .hero {
     min-height: 60vh;
-    background: url('/Get-Started/additional/BGIMG.png') center/cover;
+    background: url('/Get-Started/additional/BIGVID2.png') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
