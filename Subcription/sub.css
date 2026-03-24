@@ -27,18 +27,6 @@ body {
     align-items: center;
 }
 
-/* NAV ITEMS */
-.nav-right a,
-.nav-right button {
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    display: inline-block;
-}
-
 .nav-right a {
     color: white;
     text-decoration: none;
@@ -47,31 +35,17 @@ body {
 .nav-right button {
     background: #7B61FF;
     border: none;
+    padding: 8px 15px;
     color: white;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-/* NAV HOVER EFFECT */
-.nav-right a:hover {
-    color: #7B61FF;
-    
-}
-
-.nav-right button:hover {
-    background: #5a47d6;
-}
-
-/* SCALE EFFECT */
-.nav-right a:hover,
-.nav-right button:hover {
-    transform: scale(1.08) translateY(-1px);
-}
-
-/* TOGGLE SWITCH */
+/* TOGGLE */
 .switch {
     position: relative;
     width: 40px;
     height: 20px;
-    cursor: pointer;
 }
 
 .switch input {
@@ -84,7 +58,6 @@ body {
     height: 100%;
     background: #555;
     border-radius: 20px;
-    cursor: pointer;
 }
 
 .slider::before {
@@ -105,7 +78,7 @@ input:checked + .slider::before {
 
 /* HERO */
 .hero {
-    height: 60vh;
+    min-height: 60vh;
     background: url('/Get-Started/additional/BGIMG.png') center/cover;
     display: flex;
     justify-content: center;
@@ -114,39 +87,20 @@ input:checked + .slider::before {
 }
 
 .hero-content {
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.9);
     padding: 30px;
     border-radius: 10px;
-    transition: all 0.3s ease;
 }
 
-/* HERO HOVER */
-.hero-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-}
-
-/* HERO BUTTON */
 .hero button {
     margin-top: 15px;
     padding: 10px 20px;
     background: #7B61FF;
     border: none;
     color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.25s ease;
+    border-radius: 6px;
 }
 
-.hero button:hover {
-    background: #5a47d6;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
-}
-
-.hero button:active {
-    transform: scale(0.95);
-}
 
 /* FOOTER */
 .footer-top {
@@ -156,7 +110,68 @@ input:checked + .slider::before {
     background: #111;
 }
 
-/* FOOTER COLUMN HOVER */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+}
+
+
+
+/* VIDEO */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.2; /* clean minimal look */
+}
+/* Default dark mode hover */
+.nav-right a:hover {
+    color: #7B61FF;
+    border: none;
+}
+
+
+
+/* Entire switch clickable */
+.switch {
+    cursor: pointer;
+}
+
+/* Also ensure slider shows pointer */
+.slider {
+    cursor: pointer;
+}
+
+.hero-content {
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-content:hover {
+    transform: scale(1.05);
+}
+.hero button {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Hover */
+.hero button:hover {
+    background: #5a47d6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
+}
+
+/* Click effect */
+.hero button:active {
+    transform: scale(0.95);
+}
+
 .footer-top > div {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -166,7 +181,6 @@ input:checked + .slider::before {
     transform: translateY(-5px);
 }
 
-/* FOOTER TEXT */
 .footer-top p {
     color: #777;
     margin: 5px 0;
@@ -174,13 +188,20 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
+/* Hover on individual items */
 .footer-top p:hover {
     color: #fff;
     transform: translateX(5px);
 }
 
-.footer-bottom {
-    text-align: center;
-    padding: 15px;
-    background: #000;
+/* Smooth transition */
+.nav-right a,
+.nav-right button {
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.nav-right a:hover,
+.nav-right button:hover {
+    transform: scale(1.08);
 }
