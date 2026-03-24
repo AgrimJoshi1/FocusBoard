@@ -42,10 +42,50 @@
 <section class="tools">
     <h2>Tools</h2>
 
-    <div class="tool-box">Task Manager</div>
-    <div class="tool-box">Pomodoro Timer</div>
-    <div class="tool-box">Notes</div>
-    <div class="tool-box">Analytics</div>
+<div class="tool-box">
+    <h3>Task Manager</h3>
+    <div class="tool-content">
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <button id="addTaskBtn">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+</div>
+
+<div class="tool-box">
+    <h3>Timer</h3>
+    <div class="tool-content">
+        <input type="number" id="minutesInput" placeholder="Enter minutes" min="0">
+        <div id="timerDisplay">00:00</div>
+        <div class="timer-buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+</div>
+
+<div class="tool-box">
+    <h3>Notes</h3>
+    <div class="tool-content">
+        <!-- Tabs -->
+        <div id="notesTabs">
+            <button id="addNoteBtn">＋</button>
+        </div>
+        <!-- Active Note -->
+        <textarea id="notesInput" placeholder="Write your notes..."></textarea>
+
+        <button id="clearNotesBtn">Delete Current Note</button>
+    </div>
+</div>
+
+    <div class="tool-box">
+        <h3>Analytics</h3>
+        <div class="tool-content">
+            <p>Track your productivity stats.</p>
+        </div>
+    </div>
 </section>
 
 <!-- FOOTER 1 -->
@@ -81,6 +121,6 @@
     <p>© 2026 FocusBoard. All rights reserved.</p>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="product.js"></script>
 </body>
 </html>

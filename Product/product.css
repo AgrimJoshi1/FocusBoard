@@ -102,19 +102,62 @@ input:checked + .slider::before {
 }
 
 /* TOOLS */
+/* TOOLS */
 .tools {
     padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
     text-align: center;
 }
 
-.tool-box {
-    background: rgba(255,255,255,0.05);
-    margin: 15px auto;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
+/* TOOL BOX */
+/* TOOLS */
+.tools {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+/* TOOL BOX */
+.tool-box {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.tool-box:hover {
+    transform: translateY(-3px);
+}
+
+/* TITLE */
+.tool-box h3 {
+    margin-bottom: 15px;
+}
+
+/* CONTENT */
+.tool-content {
+    flex-grow: 1;
+}
+/* TITLE */
+.tool-box h3 {
+    margin-bottom: 15px;
+}
+
+/* CONTENT AREA */
+.tool-content {
+    flex-grow: 1;
+    width: 100%;
+}
 /* FOOTER */
 .footer-top {
     display: flex;
@@ -127,4 +170,135 @@ input:checked + .slider::before {
     text-align: center;
     padding: 15px;
     background: #000;
+}
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.task-input button {
+    padding: 10px 15px;
+    background: #7B61FF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.task-text {
+    flex: 1;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* timer*/
+#minutesInput {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#timerDisplay {
+    font-size: 2rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.timer-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.timer-buttons button {
+    flex: 1;
+    padding: 10px;
+    background: #7B61FF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*NOTES*/
+#notesInput {
+    width: 95%;
+    height: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#clearNotesBtn {
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#notesTabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.note-tab {
+    padding: 5px 10px;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note-tab.active {
+    background: #7B61FF;
+}
+
+#addNoteBtn {
+    background: #7B61FF;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
