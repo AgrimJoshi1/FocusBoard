@@ -205,3 +205,4 @@ input:checked + .slider::before {
 .nav-right button:hover {
     transform: scale(1.08);
 }
+
