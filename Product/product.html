@@ -40,9 +40,17 @@
     </div>
 </section>
 
-<!-- TOOLS -->
 <section class="tools">
-    <h2>Tools</h2>
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="/Get-Started/additional/BGVID.webm" type="video/webm">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="tools-overlay"></div>
+
+    <h2>Tools - FocusBoard</h2>
 
     <!-- TASK MANAGER -->
     <div class="tool-box">
@@ -56,13 +64,11 @@
         </div>
     </div>
 
-    <!-- TIMER + TASK TRACKING -->
+    <!-- TIMER -->
     <div class="tool-box">
         <h3>Focus Tracker</h3>
         <div class="tool-content">
-
             <input type="number" id="minutesInput" placeholder="Enter minutes">
-
             <div id="timerDisplay">00:00</div>
 
             <div class="timer-buttons">
@@ -71,9 +77,7 @@
                 <button id="resetBtn">Reset</button>
             </div>
 
-            <!-- Task Time UI -->
             <div id="taskTimerList"></div>
-
         </div>
     </div>
 
@@ -81,13 +85,11 @@
     <div class="tool-box">
         <h3>Notes</h3>
         <div class="tool-content">
-
             <div id="notesTabs">
                 <button id="addNoteBtn">＋</button>
             </div>
 
             <textarea id="notesInput" placeholder="Write your notes..."></textarea>
-
             <button id="clearNotesBtn">Delete Current Note</button>
         </div>
     </div>
@@ -96,12 +98,8 @@
     <div class="tool-box">
         <h3>Analytics</h3>
         <div class="tool-content">
-
             <p id="taskStats">Tasks: 0/0</p>
-
-            <!-- 🔥 Task Breakdown -->
             <div id="analyticsList"></div>
-
         </div>
     </div>
 
