@@ -210,3 +210,116 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+.footer-top > div {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-top > div:hover {
+    transform: translateY(-5px);
+}
+
+.footer-top p {
+    color: #777;
+    margin: 5px 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #111;
+}
+
+.footer-top p:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+/* ABOUT SECTION */
+.about {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CONTENT BOX */
+.about-content {
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.about-content:hover {
+    transform: translateY(-6px);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123,97,255,0.3);
+}
+
+/* TEXT */
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.about-main {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CONTENT BOX */
+.about-content {
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.about-content:hover {
+    transform: translateY(-6px);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123,97,255,0.3);
+}
+
+/* TEXT */
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.about-main {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 1.6;
+}
