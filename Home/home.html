@@ -3,137 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - FocusBoard</title>
+    <title>FocusBoard</title>
 
     <link rel="stylesheet" href="/Home/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- 🎥 GLOBAL BACKGROUND VIDEO -->
+<video autoplay muted loop class="global-video">
+    <source src="/Get-Started/additional/BGVID.webm" type="video/mp4">
+</video>
+
+<!-- DARK OVERLAY -->
+<div class="global-overlay"></div>
+
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-left">
-        <h2>FocusBoard</h2>
+    <h2>FocusBoard</h2>
 
-        <label class="switch">
-            <input type="checkbox" id="theme-toggle">
-            <span class="slider"></span>
-        </label>
-    </div>
-
-    <div class="nav-right">
+    <div class="nav-links">
         <a href="/Home/home.html">Home</a>
         <a href="/Subcription/sub.html">Subscription</a>
         <a href="/Product/product.html">Tools</a>
         <a href="/Contact-us/contact.html">Contact</a>
-        <a href="/Login/login.html"><button id="logout">Logout</button></a>
+        <a href="/Login/login.html"><button>Logout</button></a>
     </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (IMAGE ONLY) -->
 <section class="hero">
     <div class="hero-content">
-        <h1>Build Better Habits, Every Day</h1>
-        <p>Track tasks, manage your time, and stay in control of your workflow with a clean and powerful productivity system.</p>
-        <a href="#content"><button>Get Started</button></a>
+        <h1>Focus Smarter. Work Better.</h1>
+        <p>Your all-in-one productivity system.</p>
+        <button onclick="location.href='#tools'">Get Started</button>
     </div>
 </section>
-<section class="about">
-    <div class="about-container">
 
-        <div class="about-text">
-            <h2>About FocusBoard</h2>
-            <p>
-                FocusBoard is built for people who are tired of being busy but not productive.
-                It combines task management, focus tracking, and analytics into one clean system
-                so you can actually get things done.
-            </p>
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature-box">⚡ Fast<br><span>Instant experience</span></div>
+    <div class="feature-box">🎯 Focused<br><span>No clutter</span></div>
+    <div class="feature-box">📊 Insightful<br><span>Track progress</span></div>
+</section>
 
-            <p>
-                No clutter. No distractions. Just a system that helps you execute.
-            </p>
+<!-- TOOLS -->
+<section id="tools">
+    <h2 class="section-title">Your Tools</h2>
 
-            <a href="/Product/product.html">
-                <button>Explore Tools</button>
-            </a>
+    <div class="card-container">
+        <div class="big-card">
+            <h3>Task Manager</h3>
+            <p>Plan and track your work efficiently.</p>
         </div>
 
-        <div class="about-stats">
-            <div class="stat-box">
-                <h3>4+</h3>
-                <p>Core Tools</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>100%</h3>
-                <p>Focused Design</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>0</h3>
-                <p>Distractions</p>
-            </div>
+        <div class="big-card">
+            <h3>Focus Timer</h3>
+            <p>Deep work sessions with zero distractions.</p>
         </div>
 
+        <div class="big-card">
+            <h3>Notes</h3>
+            <p>Capture ideas instantly.</p>
+        </div>
     </div>
 </section>
-<!-- 🔥 PRODUCTIVITY VIDEO -->
-<section class="video-section">
-    <h2>Level Up Your Productivity</h2>
-    <p>Watch how top performers stay focused and consistent.</p>
 
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/ZXsQAXx_ao0" 
-            title="Productivity Video"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-    </div>
+<!-- NEW: STATS SECTION 🔥 -->
+<section class="stats">
+    <div class="stat">🚀 10K+ Tasks Completed</div>
+    <div class="stat">⏱️ 5K+ Hours Focused</div>
+    <div class="stat">🔥 100% Productivity</div>
 </section>
-<!-- 🔥 MAIN CONTENT AREA (REUSABLE) -->
-<main id="content" class="page-content">
-    <!-- Put your page content here -->
 
-    <h2 style="text-align:center;">Your Content Here</h2>
-    <p style="text-align:center;">Replace this with anything (forms, cards, etc.)</p>
+<!-- CTA -->
+<section class="cta">
+    <h2>Start Building Your Focus System Today</h2>
+    <button>Get Started</button>
+</section>
 
-</main>
+<!-- CREATORS -->
+<section class="creators">
+    <!-- <h3>Creators</h3> -->
+    <!-- <p>Ayush • Agrim • Anveer</p> -->
+</section>
 
 <!-- FOOTER -->
-<div class="footer-top">
-    <div>
-        <h4>Company</h4>
-        <p>Contact Us</p>
-        <p>About</p>
-    </div>
-
-    <div>
-        <h4>Tools</h4>
-        <p>Task Manager</p>
-        <p>Timer</p>
-        <p>Notes</p>
-    </div>
-
-    <div>
-        <h4>Info</h4>
-        <p>Privacy</p>
-        <p>Terms</p>
-    </div>
-
-    <div>
-        <h4>Social</h4>
-        <p>Instagram</p>
-        <p>Twitter</p>
-    </div>
-</div>
-
-<footer class="footer-bottom">
-    <p>© 2026 FocusBoard. All rights reserved.</p>
+<footer>
+    <p>© 2026 FocusBoard Ayush • Agrim • Anveer </p>
 </footer>
-
-<script src="/Home/home.js"></script>
 
 </body>
 </html>
