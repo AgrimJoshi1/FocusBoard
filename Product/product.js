@@ -1,6 +1,5 @@
-// =======================
+
 // TASK MANAGER
-// =======================
 
 let tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
 
@@ -82,9 +81,9 @@ function renderTasks() {
 }
 
 
-// =======================
+
 // TIMER
-// =======================
+
 
 let time = 0;
 let timer = null;
@@ -100,7 +99,7 @@ document.getElementById("startBtn").onclick = () => {
         if (m <= 0) return alert("Enter valid minutes");
 
         time = m * 60;
-        updateTimer(); // ✅ immediate update
+        updateTimer(); 
     }
 
     timer = setInterval(() => {
@@ -141,9 +140,8 @@ function updateTimer() {
 }
 
 
-// =======================
 // TIMER TASK UI
-// =======================
+
 
 function renderTaskTimerUI() {
     const container = document.getElementById("taskTimerList");
@@ -177,9 +175,9 @@ function renderTaskTimerUI() {
 }
 
 
-// =======================
+
 // NOTES
-// =======================
+
 
 const notesInput = document.getElementById("notesInput");
 const addNoteBtn = document.getElementById("addNoteBtn");
@@ -247,9 +245,9 @@ clearBtn.onclick = () => {
 };
 
 
-// =======================
+
 // ANALYTICS
-// =======================
+
 
 function updateAnalytics() {
     const total = tasks.length;
@@ -311,9 +309,8 @@ function updateAnalytics() {
 }
 
 
-// =======================
+
 // INIT
-// =======================
 
 renderTasks();
 renderTaskTimerUI();

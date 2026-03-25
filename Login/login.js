@@ -8,7 +8,7 @@ form.addEventListener("submit", function(e) {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Find matching user
+  
     const validUser = users.find(user =>
         user.username === username && user.password === password
     );
@@ -16,7 +16,7 @@ form.addEventListener("submit", function(e) {
     if (validUser) {
         alert("Login Successful!");
 
-        // Save current user session
+      
         localStorage.setItem("currentUser", JSON.stringify(validUser));
 
         window.location.href = "/Home/home.html";
