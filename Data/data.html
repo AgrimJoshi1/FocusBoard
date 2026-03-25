@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DATA IN CONSOLE LOG</h1>
+    <script>
+        console.log("CONTACT-US DATA");
+        let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+        console.log(contacts);
+
+        console.log("USER-DATA");
+        let userData = JSON.parse(localStorage.getItem("users")) || [];
+        console.log(userData);
+    </script>
+</body>
+</html>
