@@ -1,6 +1,4 @@
-
 // TASK MANAGER
-
 let tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
 
 const taskInput = document.getElementById("taskInput");
@@ -79,12 +77,7 @@ function renderTasks() {
         taskList.appendChild(li);
     });
 }
-
-
-
 // TIMER
-
-
 let time = 0;
 let timer = null;
 
@@ -112,7 +105,7 @@ document.getElementById("startBtn").onclick = () => {
         }
 
         time--;
-        updateTimer(); // ✅ ALWAYS updates UI
+        updateTimer();
     }, 1000);
 };
 
@@ -138,11 +131,7 @@ function updateTimer() {
         String(m).padStart(2, "0") + ":" +
         String(s).padStart(2, "0");
 }
-
-
 // TIMER TASK UI
-
-
 function renderTaskTimerUI() {
     const container = document.getElementById("taskTimerList");
     if (!container) return;
@@ -173,12 +162,7 @@ function renderTaskTimerUI() {
         container.appendChild(div);
     });
 }
-
-
-
 // NOTES
-
-
 const notesInput = document.getElementById("notesInput");
 const addNoteBtn = document.getElementById("addNoteBtn");
 const tabs = document.getElementById("notesTabs");
@@ -243,12 +227,7 @@ clearBtn.onclick = () => {
     renderNotes();
     loadNote();
 };
-
-
-
 // ANALYTICS
-
-
 function updateAnalytics() {
     const total = tasks.length;
     const completed = tasks.filter(t => t.completed).length;
@@ -303,15 +282,10 @@ function updateAnalytics() {
                 ${t.completed ? "Done" : "Active"}
             </span>
         `;
-
         list.appendChild(row);
     });
 }
-
-
-
 // INIT
-
 renderTasks();
 renderTaskTimerUI();
 renderNotes();
