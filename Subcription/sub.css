@@ -303,3 +303,7 @@ input:checked + .slider::before {
     padding: 15px;
     background: #000;
 }
+
+a{
+    text-decoration: none;
+}
