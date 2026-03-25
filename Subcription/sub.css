@@ -5,7 +5,6 @@ body {
     color: white;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,6 +29,7 @@ body {
 .nav-right a {
     color: white;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .nav-right button {
@@ -39,13 +39,23 @@ body {
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* TOGGLE */
+.nav-right a:hover {
+    color: #7B61FF;
+}
+
+.nav-right a:hover,
+.nav-right button:hover {
+    transform: scale(1.08);
+}
+
 .switch {
     position: relative;
     width: 40px;
     height: 20px;
+    cursor: pointer;
 }
 
 .switch input {
@@ -58,6 +68,7 @@ body {
     height: 100%;
     background: #555;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .slider::before {
@@ -76,7 +87,6 @@ input:checked + .slider::before {
     transform: translateX(20px);
 }
 
-/* HERO */
 .hero {
     min-height: 60vh;
     background: url('/Get-Started/additional/BIGVID1.png') center/cover;
@@ -90,6 +100,11 @@ input:checked + .slider::before {
     background: rgba(0,0,0,0.9);
     padding: 30px;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.hero-content:hover {
+    transform: scale(1.05);
 }
 
 .hero button {
@@ -99,26 +114,43 @@ input:checked + .slider::before {
     border: none;
     color: white;
     border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-
-/* FOOTER */
-.footer-top {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-    background: #111;
+.hero button:hover {
+    background: #5a47d6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
 }
 
-.footer-bottom {
+.hero button:active {
+    transform: scale(0.95);
+}
+
+.subscription {
+    padding: 60px 40px;
     text-align: center;
-    padding: 15px;
-    background: #000;
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
 }
 
+.subscription > *:not(.bg-video) {
+    position: relative;
+    z-index: 2;
+}
 
+.subscription h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-/* VIDEO */
+.sub-text {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
 .bg-video {
     position: absolute;
     top: 0;
@@ -127,49 +159,122 @@ input:checked + .slider::before {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.2; /* clean minimal look */
-}
-/* Default dark mode hover */
-.nav-right a:hover {
-    color: #7B61FF;
-    border: none;
+    opacity: 0.2;
 }
 
-
-
-/* Entire switch clickable */
-.switch {
-    cursor: pointer;
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* Also ensure slider shows pointer */
-.slider {
-    cursor: pointer;
-}
-
-.hero-content {
+.plan-card {
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    width: 320px;
+    min-height: 420px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
-.hero-content:hover {
-    transform: scale(1.05);
-}
-.hero button {
-    transition: all 0.25s ease;
-    cursor: pointer;
+.plan-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
 }
 
-/* Hover */
-.hero button:hover {
+.price {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan-card li {
+    margin: 10px 0;
+}
+
+.plan-card button {
+    padding: 10px 20px;
+    background: #7B61FF;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.plan-card button:hover {
     background: #5a47d6;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
 }
 
-/* Click effect */
-.hero button:active {
-    transform: scale(0.95);
+.highlight {
+    border: 1px solid #7B61FF;
+    background: rgba(123, 97, 255, 0.1);
+}
+
+.benefits {
+    padding: 80px 40px;
+    text-align: center;
+    background: #0d0d0d;
+}
+
+.benefits h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.benefit-sub {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.benefit-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.benefit {
+    width: 260px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.benefit:hover {
+    transform: translateY(-6px);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 25px rgba(123,97,255,0.25);
+}
+
+.benefit h3 {
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #111;
 }
 
 .footer-top > div {
@@ -188,185 +293,13 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* Hover on individual items */
 .footer-top p:hover {
     color: #fff;
     transform: translateX(5px);
 }
 
-/* Smooth transition */
-.nav-right a,
-.nav-right button {
-    transition: all 0.2s ease;
-}
-
-/* Hover effect */
-.nav-right a:hover,
-.nav-right button:hover {
-    transform: scale(1.08);
-}
-
-/* SUBSCRIPTION SECTION */
-.subscription {
-    padding: 60px 40px;
+.footer-bottom {
     text-align: center;
-    min-height: 50vh;
-    
+    padding: 15px;
+    background: #000;
 }
-
-.subscription h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.sub-text {
-    color: #aaa;
-    margin-bottom: 40px;
-}
-
-/* PLANS */
-.plans {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    
-}
-
-/* CARD */
-.plan-card {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    width: 280px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: all 0.3s ease;
-    
-}
-
-/* HOVER EFFECT */
-.plan-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    border: 1px solid #7B61FF;
-    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
-}
-
-
-/* PRICE */
-.price {
-    font-size: 1.5rem;
-    margin: 15px 0;
-}
-
-/* LIST */
-.plan-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.plan-card li {
-    margin: 10px 0;
-}
-
-/* BUTTON */
-.plan-card button {
-    padding: 10px 20px;
-    background: #7B61FF;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.plan-card button:hover {
-    background: #5a47d6;
-    transform: translateY(-2px);
-}
-
-.plan-card {
-    background: rgba(255,255,255,0.05);
-    padding: 35px;
-    width: 320px;
-    min-height: 420px;   
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
-    display: flex;              
-    flex-direction: column;
-    justify-content: space-between;  
-    transition: all 0.3s ease;
-    
-}
-
-/* HIGHLIGHT (PRO PLAN) */
-.highlight {
-    border: 1px solid #7B61FF;
-    background: rgba(123, 97, 255, 0.1);
-}
-
-.subscription {
-    position: relative;  /* VERY IMPORTANT */
-    overflow: hidden;    /* hides overflow */
-}
-
-.subscription > *:not(.bg-video) {
-    position: relative;
-    z-index: 2;
-}
-.bg-video {
-    opacity: 0.2;
-}
-
-
-/* BENEFITS SECTION */
-.benefits {
-    padding: 80px 40px;
-    text-align: center;
-    background: #0d0d0d;
-}
-
-.benefits h2 {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-}
-
-.benefit-sub {
-    color: #aaa;
-    margin-bottom: 40px;
-}
-
-/* GRID */
-.benefit-boxes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-/* CARD */
-.benefit {
-    width: 260px;
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* HOVER */
-.benefit:hover {
-    transform: translateY(-6px);
-    border: 1px solid #7B61FF;
-    box-shadow: 0 10px 25px rgba(123,97,255,0.25);
-}
-
-.benefit h3 {
-    margin-bottom: 10px;
-}
-
-.benefit p {
-    color: #bbb;
-    font-size: 14px;
-}
-

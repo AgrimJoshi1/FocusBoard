@@ -5,7 +5,6 @@ body {
     color: white;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,6 +29,7 @@ body {
 .nav-right a {
     color: white;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .nav-right button {
@@ -39,13 +39,23 @@ body {
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* TOGGLE */
+.nav-right a:hover {
+    color: #7B61FF;
+}
+
+.nav-right a:hover,
+.nav-right button:hover {
+    transform: scale(1.08);
+}
+
 .switch {
     position: relative;
     width: 40px;
     height: 20px;
+    cursor: pointer;
 }
 
 .switch input {
@@ -58,6 +68,7 @@ body {
     height: 100%;
     background: #555;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .slider::before {
@@ -76,7 +87,6 @@ input:checked + .slider::before {
     transform: translateX(20px);
 }
 
-/* HERO */
 .hero {
     min-height: 60vh;
     background: url('/Get-Started/additional/BIGVID7.png') center/cover;
@@ -90,6 +100,11 @@ input:checked + .slider::before {
     background: rgba(0,0,0,0.9);
     padding: 30px;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.hero-content:hover {
+    transform: scale(1.05);
 }
 
 .hero button {
@@ -99,41 +114,89 @@ input:checked + .slider::before {
     border: none;
     color: white;
     border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-/* TOOLS */
+.hero button:hover {
+    background: #5a47d6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
+}
+
+.hero button:active {
+    transform: scale(0.95);
+}
+
 .tools {
+    position: relative;
+    overflow: hidden;
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.tool-box {
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.tools-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.tools > *:not(.bg-video):not(.tools-overlay) {
+    position: relative;
+    z-index: 2;
+}
+
+.tool-box {
+    width: 93%;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.05);
     padding: 25px;
-    min-height: 500px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
     display: flex;
     flex-direction: column;
-    transition: 0.3s;
+    min-height: 500px;
+    transition: all 0.3s ease;
 }
 
 .tool-box:hover {
-    transform: translateY(-3px);
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #7B61FF;
+    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
 }
 
 .tool-box h3 {
     margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.tool-box:hover h3 {
+    color: #7B61FF;
 }
 
 .tool-content {
     flex-grow: 1;
 }
 
-/* TASK INPUT */
 .task-input {
     display: flex;
     gap: 10px;
@@ -146,6 +209,7 @@ input:checked + .slider::before {
     border-radius: 6px;
     border: none;
     outline: none;
+    transition: 0.2s;
 }
 
 .task-input button {
@@ -157,7 +221,6 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* TASK LIST */
 #taskList {
     list-style: none;
     padding: 0;
@@ -196,7 +259,6 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* TIMER */
 #minutesInput {
     padding: 10px;
     width: 99%;
@@ -226,7 +288,6 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* TIMER TASK LIST */
 #taskTimerList {
     margin-top: 20px;
 }
@@ -240,7 +301,6 @@ input:checked + .slider::before {
     margin-bottom: 8px;
 }
 
-/* NOTES */
 #notesTabs {
     display: flex;
     gap: 10px;
@@ -275,6 +335,7 @@ input:checked + .slider::before {
     border: none;
     resize: none;
     margin-bottom: 10px;
+    transition: 0.2s;
 }
 
 #clearNotesBtn {
@@ -286,7 +347,6 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* 🔥 ANALYTICS TABLE (FINAL FIX) */
 #analyticsList {
     margin-top: 15px;
 }
@@ -308,7 +368,6 @@ input:checked + .slider::before {
     padding: 5px;
 }
 
-/* STATUS COLORS */
 .status-done {
     color: #4caf50;
 }
@@ -317,102 +376,11 @@ input:checked + .slider::before {
     color: #ff9800;
 }
 
-/* FOOTER */
 .footer-top {
     display: flex;
     justify-content: space-around;
     padding: 30px;
     background: #111;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 15px;
-    background: #000;
-}
-
-
-/* TOOLS (IMPORTANT FIX) */
-.tools {
-    position: relative;
-    overflow: hidden;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* VIDEO */
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 0.2; /* clean minimal look */
-}
-
-/* OVERLAY */
-.tools-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.0);
-    opacity: 0.7; /* balanced */
-    z-index: 1;
-}
-
-/* KEEP CONTENT ABOVE */
-.tools > *:not(.bg-video):not(.tools-overlay) {
-    position: relative;
-    z-index: 2;
-}
-
-/* Default dark mode hover */
-.nav-right a:hover {
-    color: #7B61FF;
-    border: none;
-}
-
-
-
-/* Entire switch clickable */
-.switch {
-    cursor: pointer;
-}
-
-/* Also ensure slider shows pointer */
-.slider {
-    cursor: pointer;
-}
-
-.hero-content {
-    transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.hero-content:hover {
-    transform: scale(1.05);
-}
-.hero button {
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
-
-/* Hover */
-.hero button:hover {
-    background: #5a47d6;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(123, 97, 255, 0.4);
-}
-
-/* Click effect */
-.hero button:active {
-    transform: scale(0.95);
 }
 
 .footer-top > div {
@@ -431,74 +399,19 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
-/* Hover on individual items */
 .footer-top p:hover {
     color: #fff;
     transform: translateX(5px);
 }
-/* TOOL BOX BASE */
-.tool-box {
-    background: rgba(255,255,255,0.05);
-    margin: 20px auto;
-    padding: 25px;
-    width: 93%;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: all 0.3s ease;
-}
 
-/* MAIN HOVER EFFECT */
-.tool-box:hover {
-    transform: translateY(-8px) scale(1.02);
-    background: rgba(255,255,255,0.08);
-    border: 1px solid #7B61FF;
-    box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
-}
-
-/* TITLE EFFECT */
-.tool-box h3 {
-    transition: 0.3s;
-}
-
-.tool-box:hover h3 {
-    color: #7B61FF;
-}
-
-/* INPUT + TEXTAREA FOCUS */
-.tool-box input,
-.tool-box textarea {
-    transition: 0.2s;
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #000;
 }
 
 .tool-box input:focus,
 .tool-box textarea:focus {
     outline: 2px solid #7B61FF;
-    background: rgba(255,255,255,0.1);
-}
-
-/* BUTTON EFFECTS */
-.tool-box button {
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.tool-box button:hover {
-    background: #5a47d6;
-    transform: translateY(-1px);
-}
-
-.tool-box button:active {
-    transform: scale(0.95);
-}
-
-/* Smooth transition */
-.nav-right a,
-.nav-right button {
-    transition: all 0.2s ease;
-}
-
-/* Hover effect */
-.nav-right a:hover,
-.nav-right button:hover {
-    transform: scale(1.08);
+    background: rgba(0,0,0,0.6);
 }
