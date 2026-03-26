@@ -16,9 +16,6 @@ form.addEventListener("submit", function(e) {
     if (validUser) {
         alert("Login Successful!");
 
-      
-        localStorage.setItem("currentUser", JSON.stringify(validUser));
-
         window.location.href = "/Home/home.html";
     } else {
         alert("Invalid username or password");
