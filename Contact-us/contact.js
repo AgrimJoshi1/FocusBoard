@@ -15,7 +15,7 @@ form.addEventListener("submit", function (e) {
     let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
     contacts.push(contactData);
     localStorage.setItem("contacts", JSON.stringify(contacts));
-    alert("Your message has been saved successfully!");
+    alert("Your message has been sent successfully!");
 
     form.reset();
 });
