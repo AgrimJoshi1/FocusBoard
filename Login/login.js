@@ -10,14 +10,15 @@ form.addEventListener("submit", function(e) {
 
   
     const validUser = users.find(user =>
-        user.username === username && user.password === password
+        (user.username === username || user.username === email) && user.password === password
     );
+
 
     if (validUser) {
         alert("Login Successful!");
 
         window.location.href = "/Home/home.html";
     } else {
-        alert("Invalid username or password");
+        alert("Invalid Login Credentials");
     }
 });
