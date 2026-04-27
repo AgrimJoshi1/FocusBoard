@@ -1,3 +1,11 @@
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    
+function logout() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "/Login/login.html";
+}
+
+
 const form = document.querySelector(".contact-form");
 form.addEventListener("submit", function (e) {
     e.preventDefault(); 

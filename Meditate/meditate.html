@@ -170,18 +170,6 @@
     <p>© 2026 FocusBoard Ayush • Agrim • Anveer</p>
 </footer>
 
-<script src="meditate.js">
-    
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    
-    if (!currentUser) {
-    alert("Login required!");
-    window.location.href = "/Login/login.html";
-}
-function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.href = "../Login/login.html";
-}
-</script>
+<script src="meditate.js"></script>
 </body>
 </html>
