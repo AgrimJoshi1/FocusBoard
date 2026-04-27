@@ -77,6 +77,7 @@ function renderTasks() {
         taskList.appendChild(li);
     });
 }
+
 // TIMER
 let time = 0;
 let timer = null;
@@ -92,7 +93,7 @@ document.getElementById("startBtn").onclick = () => {
         if (m <= 0) return alert("Enter valid minutes");
 
         time = m * 60;
-        updateTimer(); 
+        updateTimer();
     }
 
     timer = setInterval(() => {
@@ -118,8 +119,58 @@ document.getElementById("resetBtn").onclick = () => {
     clearInterval(timer);
     timer = null;
     time = 0;
+    display.style.color = "white";
     display.textContent = "00:00";
 };
+
+document.getElementById("pomodoroBtn").onclick = () => {
+    clearInterval(timer);
+    timer = null;
+    time = 25 * 60;
+    minutesInput.value = 25;
+    updateTimer();
+
+    timer = setInterval(() => {
+        if (time <= 0) {
+            clearInterval(timer);
+            timer = null;
+            display.textContent = "00:00";
+            alert("Pomodoro complete! Starting 5 minute break...");
+
+            time = 5 * 60;
+            display.style.color = "#32dc78";
+            updateTimer();
+
+            timer = setInterval(() => {
+                if (time <= 0) {
+                    clearInterval(timer);
+                    timer = null;
+                    display.textContent = "00:00";
+                    display.style.color = "white";
+                    alert("✅ Break over! Ready for the next Pomodoro?");
+                    return;
+                }
+                time--;
+                updateTimer();
+            }, 1000);
+
+            return;
+        }
+        time--;
+        updateTimer();
+    }, 1000);
+};
+
+function updateTimer() {
+    if (!display) return;
+
+    let m = Math.floor(time / 60);
+    let s = time % 60;
+
+    display.textContent =
+        String(m).padStart(2, "0") + ":" +
+        String(s).padStart(2, "0");
+}
 
 function updateTimer() {
     if (!display) return;

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathe — FocusBoard</title>
+    <link rel="stylesheet" href="meditate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<video autoplay muted loop class="global-video">
+    <source src="/Get-Started/additional/BGVID.webm" type="video/mp4">
+</video>
+<div class="global-overlay"></div>
+
+<nav class="navbar">
+    <h2>FocusBoard</h2>
+    <div class="nav-links">
+        <a href="/Home/home.html">Home</a>
+        <a href="/Subcription/sub.html">Subscription</a>
+        <a href="/Product/product.html">Tools</a>
+        <a href="/Meditate/meditate.html">Relax</a>
+        <a href="/Contact-us/contact.html">Contact</a>
+        <a href="/Login/login.html"><button>Logout</button></a>
+    </div>
+</nav>
+
+<main class="breathe-main">
+
+    <div class="page-header">
+        <h1 class="page-title">Box Breathing</h1>
+        <p class="page-subtitle">A technique used by Navy SEALs to calm the mind and sharpen focus</p>
+    </div>
+
+    <div class="breathing-wrapper">
+
+        <!-- Central breathing orb -->
+        <div class="orb-container" id="orbContainer">
+            <div class="orb-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+            </div>
+            <div class="orb" id="orb">
+                <div class="orb-inner">
+                    <span class="phase-label" id="phaseLabel">Ready</span>
+                    <span class="phase-count" id="phaseCount">—</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box diagram -->
+        <div class="box-diagram" id="boxDiagram">
+            <div class="box-corner top-left active" id="corner-0">
+                <span class="corner-num">4s</span>
+                <span class="corner-name">Inhale</span>
+            </div>
+            <div class="box-edge top-edge" id="edge-top">
+                <div class="edge-progress"></div>
+            </div>
+            <div class="box-corner top-right" id="corner-1">
+                <span class="corner-num">4s</span>
+                <span class="corner-name">Hold</span>
+            </div>
+            <div class="box-edge right-edge" id="edge-right">
+                <div class="edge-progress"></div>
+            </div>
+            <div class="box-corner bottom-right" id="corner-2">
+                <span class="corner-num">4s</span>
+                <span class="corner-name">Exhale</span>
+            </div>
+            <div class="box-edge bottom-edge" id="edge-bottom">
+                <div class="edge-progress"></div>
+            </div>
+            <div class="box-corner bottom-left" id="corner-3">
+                <span class="corner-num">4s</span>
+                <span class="corner-name">Hold</span>
+            </div>
+            <div class="box-edge left-edge" id="edge-left">
+                <div class="edge-progress"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="session-info">
+                <div class="info-item">
+                    <span class="info-val" id="cycleCount">0</span>
+                    <span class="info-label">Cycles</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                    <span class="info-val" id="sessionTime">0:00</span>
+                    <span class="info-label">Duration</span>
+                </div>
+            </div>
+
+            <button class="start-btn" id="startBtn" onclick="toggleSession()">
+                <span id="btnText">Begin Session</span>
+            </button>
+
+            <div class="duration-picker">
+                <span class="picker-label">Session length</span>
+                <div class="picker-options">
+                    <button class="picker-btn active" onclick="setDuration(this, 5)">5 min</button>
+                    <button class="picker-btn" onclick="setDuration(this, 10)">10 min</button>
+                    <button class="picker-btn" onclick="setDuration(this, 15)">15 min</button>
+                    <button class="picker-btn" onclick="setDuration(this, 0)">∞</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- How it works -->
+    <div class="how-section">
+        <h3 class="how-title">The Four Sides</h3>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-icon">🫁</div>
+                <h4>Inhale</h4>
+                <p>Breathe in slowly through your nose for 4 seconds, filling your lungs completely.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🤍</div>
+                <h4>Hold</h4>
+                <p>Hold your breath for 4 seconds. Keep your body relaxed and still.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">💨</div>
+                <h4>Exhale</h4>
+                <p>Exhale slowly through your mouth for 4 seconds, releasing all tension.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🌙</div>
+                <h4>Hold</h4>
+                <p>Hold the empty breath for 4 seconds before beginning the next cycle.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<div class="footer-top">
+    <div>
+        <h4>Company</h4>
+        <a href="/Contact-us/contact.html"><p>Contact Us</p></a>
+        <a href="/Home/home.html"><p>About</p></a>
+    </div>
+    <div>
+        <h4>Tools</h4>
+        <a href="/Product/product.html"><p>Task Manager</p></a>
+        <a href="/Product/product.html"><p>Timer</p></a>
+        <a href="/Product/product.html"><p>Notes</p></a>
+    </div>
+    <div>
+        <h4>Info</h4>
+        <p>Privacy</p>
+        <p>Terms</p>
+    </div>
+    <div>
+        <h4>Social</h4>
+        <p>Instagram</p>
+        <p>Twitter</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 FocusBoard Ayush • Agrim • Anveer</p>
+</footer>
+
+<script src="meditate.js"></script>
+</body>
+</html>

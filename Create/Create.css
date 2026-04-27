@@ -6,7 +6,6 @@ body {
     overflow: hidden;
 }
 
-
 #bg-video {
     position: fixed;
     inset: 0;
@@ -15,7 +14,6 @@ body {
     object-fit: cover;
     z-index: -2;
 }
-
 
 body::after {
     content: "";
@@ -31,57 +29,84 @@ body::after {
     align-items: center;
     height: 100%;
 }
+
 .login-box {
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
     padding: 35px;
-    border-radius: 12px;
+    border-radius: 14px;
     width: 320px;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(123,97,255,0.3);
+    box-shadow: 0 10px 40px rgba(123,97,255,0.15);
+}
+
+.brand-badge {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.brand-badge span {
+    background: rgba(123,97,255,0.12);
+    border: 1px solid rgba(123,97,255,0.35);
+    color: #b09fff;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 50px;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 5px;
+    font-size: 1.6rem;
 }
 
 .subtitle {
     text-align: center;
     color: #aaa;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    font-size: 0.85rem;
 }
 
-
 input {
-  width: 93%;
+    width: 93%;
     padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 6px;
     outline: none;
+    background: rgba(255,255,255,0.07);
+    color: white;
+}
+
+input::placeholder {
+    color: #888;
 }
 
 input:focus {
     outline: 2px solid #7B61FF;
 }
 
-
 button {
     width: 100%;
     padding: 12px;
-    margin-top: 10px;
-    background: #7B61FF;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #7B61FF, #5a47d6);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     color: white;
-    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
 }
 
 button:hover {
-    opacity: 0.85;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(123,97,255,0.5);
 }
 
 button:active {
@@ -92,9 +117,14 @@ button:active {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
+    color: #888;
 }
 
 .extra a {
     color: #7B61FF;
     text-decoration: none;
+}
+
+.extra a:hover {
+    text-decoration: underline;
 }
