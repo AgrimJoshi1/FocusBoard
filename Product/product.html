@@ -24,7 +24,7 @@
         <a href="/Product/product.html">Tools</a>
         <a href="/Meditate/meditate.html">Relax</a>
         <a href="/Contact-us/contact.html">Contact</a>
-        <a href="/Login/login.html"><button id="logout">Logout</button></a>
+        <a href="#" onclick="logout()"><button>Logout</button></a>
     </div>
 </nav>
 
@@ -132,6 +132,10 @@
     if (!currentUser) {
     alert("Login required!");
     window.location.href = "/Login/login.html";
+}
+function logout() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "../Login/login.html";
 }
 </script>
 
