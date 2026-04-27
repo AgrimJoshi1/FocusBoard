@@ -10,7 +10,7 @@ form.addEventListener("submit", function(e) {
 
   
     const validUser = users.find(user =>
-        (user.username === username || user.username === email) && user.password === password
+        ((user.username === username) || (user.email === username)) && (user.password === password)
     );
 
 
