@@ -301,3 +301,7 @@ a{
 .hero h1 {
     font-size: 3rem;
 }
+#user-name{
+    background-color: rgba(0, 0, 0, 0.15);
+    
+}

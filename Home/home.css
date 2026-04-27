@@ -195,7 +195,10 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
-
+#user-name{
+    background-color: rgba(0, 0, 0, 0.15);
+    
+}
 .footer-top {
     display: flex;
     justify-content: space-around;

@@ -20,6 +20,7 @@
 
 <nav class="navbar">
     <h2>FocusBoard</h2>
+    
 
     <div class="nav-links">
         <a href="/Home/home.html">Home</a>
@@ -27,6 +28,7 @@
         <a href="/Product/product.html">Tools</a>
         <a href="/Meditate/meditate.html">Relax</a>
         <a href="/Contact-us/contact.html">Contact</a>
+        <a href="/Account/account.html" ><button id="user-name"></button></a>
         <a href="#" onclick="logout()"><button>Logout</button></a>
     </div>
 </nav>
@@ -141,6 +143,13 @@
 </footer>
 <script>
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser) {
+    document.getElementById("user-name").textContent = "👤 " + currentUser.username;
+    } else {
+        document.getElementById("user-name").textContent = "👤 " + "Guest";
+    }
+
+console.log(currentUser);
     function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "../Login/login.html";

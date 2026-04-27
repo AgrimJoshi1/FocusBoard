@@ -3,6 +3,11 @@ if (!currentUser) {
     alert("Login required!");
     window.location.href = "/Login/login.html";
 }
+if (currentUser) {
+    document.getElementById("user-name").textContent = "👤 " + currentUser.username;
+    } else {
+        document.getElementById("user-name").textContent = "👤 " + "Guest";
+    }
 function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";

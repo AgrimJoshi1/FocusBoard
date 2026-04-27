@@ -513,3 +513,7 @@ footer {
     .top-edge, .bottom-edge { left: 61px; right: 61px; }
     .left-edge, .right-edge { top: 61px; bottom: 61px; }
 }
+#user-name{
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    
+}
