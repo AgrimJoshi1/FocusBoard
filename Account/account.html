@@ -3,9 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FocusBoard - Account</title>
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+ 
+<video autoplay muted loop class="global-video">
+    <source src="/Get-Started/additional/BGVID.webm" type="video/mp4">
+</video>
+<div class="global-overlay"></div>
+ 
+<nav class="navbar">
+    <h2>FocusBoard</h2>
+    <div class="nav-links">
+        <a href="/Home/home.html">Home</a>
+        <a href="/Subcription/sub.html">Subscription</a>
+        <a href="/Product/product.html">Tools</a>
+        <a href="/Meditate/meditate.html">Relax</a>
+        <a href="/Contact-us/contact.html">Contact</a>
+        <a href="/Account/account.html"><button id="user-name"></button></a>
+        <a href="#" onclick="logout()"><button>Logout</button></a>
+    </div>
+</nav>
+ 
+<div class="page-wrapper">
+ 
+    <div class="page-header">
+        <h1>My Account</h1>
+        <p>Manage your profile, security and preferences</p>
+    </div>
+ 
+    <!-- Avatar -->
+    <div class="avatar-block">
+        <div class="avatar-ring" onclick="changeAvatar()" title="Click to change avatar">
+            <span id="avatar-emoji">👾</span>
+        </div>
+        <div class="avatar-name" id="display-name">Loading...</div>
+        <div class="avatar-badge" id="display-plan">Free Plan</div>
+    </div>
+ 
+    <!-- Stats -->
+    <div class="account-card">
+        <div class="card-title">📊 Your Activity</div>
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-num" id="stat-tasks">0</div>
+                <div class="stat-label">Tasks Completed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="stat-hours">0h</div>
+                <div class="stat-label">Hours Focused</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="stat-streak">0🔥</div>
+                <div class="stat-label">Day Streak</div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Personal Info -->
+    <div class="account-card">
+        <div class="card-title">👤 Personal Information</div>
+        <div class="field-row">
+            <div class="field">
+                <label>First Name</label>
+                <input class="field-input" id="field-firstname" type="text" placeholder="Enter first name">
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input class="field-input" id="field-lastname" type="text" placeholder="Enter last name">
+            </div>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label>Username</label>
+                <input class="field-input" id="field-username" type="text" placeholder="@username">
+            </div>
+            <div class="field">
+                <label>Date of Birth</label>
+                <input class="field-input" id="field-dob" type="date">
+            </div>
+        </div>
+        <div class="field-row single">
+            <div class="field">
+                <label>Bio</label>
+                <input class="field-input" id="field-bio" type="text" placeholder="A short bio about yourself...">
+            </div>
+        </div>
+        <div class="btn-row">
+            <button class="btn-cancel" onclick="resetPersonal()">Cancel</button>
+            <button onclick="savePersonal()">Save Changes</button>
+        </div>
+    </div>
+ 
+    <!-- Contact Info -->
+    <div class="account-card">
+        <div class="card-title">📬 Contact Information</div>
+        <div class="field-row">
+            <div class="field">
+                <label>Email Address</label>
+                <input class="field-input" id="field-email" type="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input class="field-input" id="field-phone" type="tel" placeholder="+91 00000 00000">
+            </div>
+        </div>
+        <div class="field-row single">
+            <div class="field">
+                <label>Location</label>
+                <input class="field-input" id="field-location" type="text" placeholder="City, Country">
+            </div>
+        </div>
+        <div class="btn-row">
+            <button class="btn-cancel" onclick="resetContact()">Cancel</button>
+            <button onclick="saveContact()">Save Changes</button>
+        </div>
+    </div>
+ 
+    <!-- Security -->
+    <div class="account-card">
+        <div class="card-title">🔒 Security</div>
+        <div class="field-row single">
+            <div class="field">
+                <label>Current Password</label>
+                <div class="pwd-wrap">
+                    <input class="field-input" id="field-current-pwd" type="password" placeholder="Enter current password">
+                    <span class="pwd-eye" onclick="togglePwd('field-current-pwd', this)">👁</span>
+                </div>
+            </div>
+        </div>
+        <div class="field-row">
+            <div class="field">
+                <label>New Password</label>
+                <div class="pwd-wrap">
+                    <input class="field-input" id="field-new-pwd" type="password" placeholder="New password">
+                    <span class="pwd-eye" onclick="togglePwd('field-new-pwd', this)">👁</span>
+                </div>
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <div class="pwd-wrap">
+                    <input class="field-input" id="field-confirm-pwd" type="password" placeholder="Confirm new password">
+                    <span class="pwd-eye" onclick="togglePwd('field-confirm-pwd', this)">👁</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-row">
+            <button onclick="changePassword()">Update Password</button>
+        </div>
+    </div>
+ 
+    <!-- Preferences -->
+    <div class="account-card">
+        <div class="card-title">⚙️ Preferences</div>
+        <div class="toggle-row">
+            <div>
+                <div class="toggle-label">Email Notifications</div>
+                <div class="toggle-sub">Receive updates and reminders via email</div>
+            </div>
+            <div class="toggle-switch on" id="toggle-email" onclick="this.classList.toggle('on')"></div>
+        </div>
+        <div class="toggle-row">
+            <div>
+                <div class="toggle-label">Focus Sound</div>
+                <div class="toggle-sub">Play ambient sound during focus sessions</div>
+            </div>
+            <div class="toggle-switch on" id="toggle-sound" onclick="this.classList.toggle('on')"></div>
+        </div>
+        <div class="toggle-row">
+            <div>
+                <div class="toggle-label">Weekly Report</div>
+                <div class="toggle-sub">Get a weekly summary of your productivity</div>
+            </div>
+            <div class="toggle-switch" id="toggle-report" onclick="this.classList.toggle('on')"></div>
+        </div>
+        <div class="btn-row">
+            <button onclick="savePrefs()">Save Preferences</button>
+        </div>
+    </div>
+ 
+    <!-- Danger Zone -->
+    <div class="account-card danger-card">
+        <div class="card-title danger-title">⚠️ Danger Zone</div>
+        <p class="danger-text">Deleting your account is permanent and cannot be undone. All your data will be lost.</p>
+        <div class="btn-row">
+            <button class="btn-danger" onclick="confirmDelete()">Delete My Account</button>
+        </div>
+    </div>
+ 
+</div>
+ 
+<div class="toast" id="toast"></div>
+ 
+<script src="account.js"></script>
 </body>
 </html>

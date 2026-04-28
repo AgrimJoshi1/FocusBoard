@@ -7,7 +7,8 @@ form.addEventListener("submit", function(e) {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const confirm  = document.getElementById("confirm-password").value;
-    const sub = "Free";
+    const plan = "Free";
+    
 
     if (password !== confirm) {
         alert("Passwords do not match!");
@@ -31,7 +32,7 @@ form.addEventListener("submit", function(e) {
         return;
     }
 
-    users.push({ username, email, password, subscription: sub });
+    users.push({ username, email, password, plan: plan, tasksCompleted: 0, hoursFocused: 0, streak: 0, firstName: "", lastName: "", dob: "", bio: "", phone: "", location: "" });
     localStorage.setItem("users", JSON.stringify(users));
 
     alert("Account created! Welcome to FocusBoard 🎉");
