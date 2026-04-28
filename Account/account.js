@@ -18,6 +18,11 @@ function showToast(msg) {
  
     function saveUser(user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const index = users.findIndex(u => u.username === user.username);
+        if (index !== -1) users[index] = user;
+        localStorage.setItem("users", JSON.stringify(users));
     }
  
     function loadUser() {
@@ -25,9 +30,6 @@ function showToast(msg) {
         document.getElementById('user-name').textContent = '👤 ' + (user.username || 'Guest');
         document.getElementById('display-name').textContent = user.username || 'Guest';
         document.getElementById('display-plan').textContent = user.plan || 'Free Plan';
-        document.getElementById('stat-tasks').textContent = user.tasksCompleted || 0;
-        document.getElementById('stat-hours').textContent = (user.hoursFocused || 0) + 'h';
-        document.getElementById('stat-streak').textContent = (user.streak || 0) + '🔥';
         document.getElementById('field-firstname').value = user.firstName || '';
         document.getElementById('field-lastname').value  = user.lastName  || '';
         document.getElementById('field-username').value  = user.username  || '';
@@ -36,6 +38,18 @@ function showToast(msg) {
         document.getElementById('field-email').value    = user.email    || '';
         document.getElementById('field-phone').value    = user.phone    || '';
         document.getElementById('field-location').value = user.location || '';
+
+        const tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
+        const completedTasks = tasks.filter(t => t.completed).length;
+        document.getElementById('stat-tasks').textContent = completedTasks;
+
+        let totalMs = 0;
+        tasks.forEach(t => { if (t.completed && t.endTime) totalMs += (t.endTime - t.startTime); });
+        const hours = (totalMs / 3600000).toFixed(1);
+        document.getElementById('stat-hours').textContent = hours + 'h';
+
+        document.getElementById('stat-streak').textContent = (user.streak || 0) + '🔥';
+
         setToggle('toggle-email',  user.prefEmail  !== false);
         setToggle('toggle-sound',  user.prefSound  !== false);
         setToggle('toggle-report', user.prefReport === true);
