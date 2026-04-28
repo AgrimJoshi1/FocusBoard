@@ -45,6 +45,24 @@ function addTask() {
     renderTasks();
     renderTaskTimerUI();
     updateAnalytics();
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const index = users.findIndex(u => u.username === currentUser.username);
+    if (index === -1) return;
+
+    const now = Date.now();
+    const lastActive = users[index].lastActiveDate || 0;
+    const hoursPassed = (now - lastActive) / 3600000;
+
+    if (hoursPassed >= 24) {
+        users[index].streak = (users[index].streak || 0) + 1;
+        users[index].lastActiveDate = now;
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("currentUser", JSON.stringify(users[index]));
+    }
+
+    updateStreak();
 }
 
 function toggleTask(index) {
