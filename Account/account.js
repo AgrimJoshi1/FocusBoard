@@ -50,9 +50,13 @@ function showToast(msg) {
         const user = getUser();
         user.firstName = document.getElementById('field-firstname').value.trim();
         user.lastName  = document.getElementById('field-lastname').value.trim();
-        user.username  = document.getElementById('field-username').value.trim();
-        user.dob       = document.getElementById('field-dob').value;
-        user.bio       = document.getElementById('field-bio').value.trim();
+        user.dob = document.getElementById('field-dob').value;
+        user.bio = document.getElementById('field-bio').value.trim();
+        const newUsername = document.getElementById('field-username').value.trim();
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const taken = users.some(u => u.username === newUsername && u.username !== getUser().username);
+        if (taken) { showToast('❌ Username already taken!'); return; }
+        user.username = newUsername;
         saveUser(user);
         document.getElementById('display-name').textContent = user.username || 'Guest';
         document.getElementById('user-name').textContent = '👤 ' + (user.username || 'Guest');
@@ -98,9 +102,13 @@ function showToast(msg) {
  
     function confirmDelete() {
         if (confirm('Are you sure? This cannot be undone.')) {
-            localStorage.removeItem('currentUser');
-            showToast('Account deleted. Redirecting...');
-            setTimeout(() => window.location.href = '/Login/login.html', 1800);
+        const user = getUser();
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users = users.filter(u => u.username !== user.username);
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.removeItem('currentUser');
+        showToast('Account deleted. Redirecting...');
+        setTimeout(() => window.location.href = '/Login/login.html', 1800);
         }
     }
  
