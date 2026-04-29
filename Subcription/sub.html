@@ -58,7 +58,7 @@
                 <li>✖ Advanced Tools</li>
             </ul>
 
-            <button>Current Plan</button>
+            <button onclick="updatePlan('Free')">Current Plan</button>
         </div>
 
         <div class="plan-card highlight">
@@ -72,7 +72,7 @@
                 <li>✔ Priority Support</li>
             </ul>
 
-            <button>Upgrade</button>
+            <button onclick="updatePlan('Pro')">Upgrade</button>
         </div>
 
         <div class="plan-card">
@@ -86,7 +86,7 @@
                 <li>✔ Early Access Tools</li>
             </ul>
 
-            <button>Go Premium</button>
+            <button onclick="updatePlan('Premium')">Go Premium</button>
         </div>
 
     </div>
@@ -134,6 +134,8 @@
 
 </section>
 
+<div class="toast" id="toast"></div>
+
 <div class="footer-top">
     <div>
         <h4>Company</h4>
@@ -166,17 +168,6 @@
 </footer>
 
 <script src="/Subcription/sub.js">
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    function currentuser() {
-        if (!currentUser) {
-    alert("Login required!");
-    window.location.href = "/Login/login.html";
-}
-    }
-function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.href = "../Login/login.html";
-}
 </script>
 
 </body>

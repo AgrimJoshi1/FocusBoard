@@ -411,3 +411,36 @@ button:active {
 a {
     text-decoration: none;
 }
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background: #111;
+}
+
+.footer-top > div {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-top > div:hover {
+    transform: translateY(-5px);
+}
+
+.footer-top p {
+    color: #777;
+    margin: 5px 0;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.footer-top p:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+}
