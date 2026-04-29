@@ -1,3 +1,9 @@
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+if (!currentUser) {
+    alert("Login required!");
+    window.location.href = "/Login/login.html";
+}
+
 function showToast(msg) {
         const t = document.getElementById('toast');
         t.textContent = msg;
@@ -39,14 +45,10 @@ function showToast(msg) {
         document.getElementById('field-phone').value    = user.phone    || '';
         document.getElementById('field-location').value = user.location || '';
 
-        const tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
-        const completedTasks = tasks.filter(t => t.completed).length;
-        document.getElementById('stat-tasks').textContent = completedTasks;
+        
+        document.getElementById('stat-tasks').textContent = user.tasksCompleted || 0;
 
-        let totalMs = 0;
-        tasks.forEach(t => { if (t.completed && t.endTime) totalMs += (t.endTime - t.startTime); });
-        const hours = (totalMs / 3600000).toFixed(1);
-        document.getElementById('stat-hours').textContent = hours + 'h';
+        
 
         document.getElementById('stat-streak').textContent = (user.streak || 0) + '🔥';
 
