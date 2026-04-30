@@ -360,3 +360,15 @@ a{
     opacity: 1;
     transform: translateY(0);
 }
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+#user-name{
+    background-color: rgba(0, 0, 0, 0.15);
+    
+}
