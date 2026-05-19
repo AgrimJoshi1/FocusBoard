@@ -61,7 +61,7 @@
             <button onclick="updatePlan('Free')">Current Plan</button>
         </div>
 
-        <div class="plan-card highlight">
+        <div class="plan-card">
             <h2>Pro</h2>
             <p class="price">₹199/month</p>
 
@@ -133,6 +133,40 @@
     </div>
 
 </section>
+
+<div class="payment-modal" id="paymentModal">
+    <div class="payment-box">
+        <h2>Complete Payment</h2>
+        <p id="payment-plan-text">Upgrade Plan</p>
+
+        <input type="text" id="billingName" placeholder="Full Name">
+        <input type="text" id="billingAddress" placeholder="Billing Address">
+        <input type="text" id="billingCity" placeholder="City">
+        <input type="text" id="billingPin" placeholder="PIN Code">
+
+        <select id="paymentMethod" onchange="togglePaymentFields()">
+            <option value="">Select Payment Method</option>
+            <option value="card">Credit / Debit Card</option>
+            <option value="upi">UPI</option>
+            <option value="netbanking">Net Banking</option>
+        </select>
+
+        <div id="cardFields" class="hidden">
+            <input type="text" id="cardNumber" placeholder="Card Number">
+            <input type="text" id="cardExpiry" placeholder="MM/YY">
+            <input type="text" id="cardCVV" placeholder="CVV">
+        </div>
+
+        <div id="upiFields" class="hidden">
+            <input type="text" id="upiId" placeholder="example@upi">
+        </div>
+
+        <div class="payment-actions">
+            <button onclick="closePaymentModal()">Cancel</button>
+            <button onclick="confirmPayment()">Pay Now</button>
+        </div>
+    </div>
+</div>
 
 <div class="toast" id="toast"></div>
 

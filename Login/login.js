@@ -1,4 +1,5 @@
 const form = document.getElementById("login-form");
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 function showToast(msg) {
         const t = document.getElementById('toast');
@@ -11,7 +12,12 @@ function redirsignup(){
     setTimeout(() => window.location.href = '/Create/Create.html', 1800);
 }
 function redirguest(){
+    if (currentUser){
+        showToast("Already Logged In!. Redirecting...");
+    }
+    else{
     showToast("Redirecting...");
+    }
     setTimeout(() => window.location.href = '/Home/home.html', 1800);
 }
 form.addEventListener("submit", function(e) {
