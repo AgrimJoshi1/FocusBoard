@@ -13,9 +13,6 @@ function logout() {
     window.location.href = "/Login/login.html";
 }
 
-
-
-
 // TASK MANAGER
 let tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
 
@@ -67,12 +64,28 @@ function addTask() {
 
 function toggleTask(index) {
     const task = tasks[index];
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (!task.completed) {
+        task.completed = true;
+        task.endTime = Date.now();
+        if (currentUser) {
+            const userIndex = users.findIndex(
+                u => u.username === currentUser.username
+            );
+            if (userIndex !== -1) {
+                users[userIndex].tasksCompleted =
+                    (users[userIndex].tasksCompleted || 0) + 1;
+                localStorage.setItem("users", JSON.stringify(users));
+                localStorage.setItem("currentUser",JSON.stringify(users[userIndex]));
+            }
+        }
 
-    task.completed = !task.completed;
-
-    
-
-    task.endTime = task.completed ? Date.now() : null;
+    } else {
+       
+        task.completed = false;
+        task.endTime = null;
+    }
 
     saveTasks();
     renderTasks();
@@ -200,16 +213,6 @@ document.getElementById("pomodoroBtn").onclick = () => {
     }, 1000);
 };
 
-function updateTimer() {
-    if (!display) return;
-
-    let m = Math.floor(time / 60);
-    let s = time % 60;
-
-    display.textContent =
-        String(m).padStart(2, "0") + ":" +
-        String(s).padStart(2, "0");
-}
 
 function updateTimer() {
     if (!display) return;
@@ -375,7 +378,7 @@ function updateAnalytics() {
         list.appendChild(row);
     });
 }
-// INIT
+
 renderTasks();
 renderTaskTimerUI();
 renderNotes();
