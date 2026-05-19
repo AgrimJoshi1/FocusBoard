@@ -1,8 +1,20 @@
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 if (!currentUser) {
-    alert("Login required!");
+    document.getElementById("loginModal").style.display = "flex";
+    const navbar = document.getElementById("navbar");
+    navbar.style.backgroundColor = "black"; 
+}
+
+if (currentUser) {
+    document.getElementById("user-name").textContent = "👤 " + currentUser.username;
+    } else {
+        document.getElementById("user-name").textContent = "👤 " + "Guest";
+    }
+function logout() {
+    localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";
 }
+
 
 function showToast(msg) {
         const t = document.getElementById('toast');

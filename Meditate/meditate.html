@@ -14,9 +14,9 @@
 </video>
 <div class="global-overlay"></div>
 
-<nav class="navbar">
+<nav class="navbar" id="navbar">
     <h2>FocusBoard</h2>
-    <div class="nav-links">
+    <div class="nav-links" id="navbar">
         <a href="/Home/home.html">Home</a>
         <a href="/Subcription/sub.html">Subscription</a>
         <a href="/Product/product.html">Tools</a>
@@ -26,6 +26,20 @@
         <a href="#" onclick="logout()"><button>Logout</button></a>
     </div>
 </nav>
+
+<div class="login-modal" id="loginModal">
+    <div class="login-box">
+        <h2>Login Required</h2>
+        <p>You need to be logged in to access this feature.</p>
+
+        <div class="login-actions">
+            <button onclick="window.location.href='/Login/login.html'">
+                Login
+            </button>
+        </div>
+    </div>
+</div>
+
 
 <main class="breathe-main">
 

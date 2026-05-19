@@ -2,8 +2,9 @@ const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let pendingPlan = null;
 
 if (!currentUser) {
-    alert("Login required!");
-    window.location.href = "/Login/login.html";
+    document.getElementById("loginModal").style.display = "flex";
+    const navbar = document.getElementById("navbar");
+    navbar.style.backgroundColor = "black"; 
 }
 
 if (currentUser) {
