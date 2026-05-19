@@ -1,5 +1,19 @@
 const form = document.getElementById("login-form");
 
+function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
+    }
+function redirsignup(){
+    showToast("Redirecting...");
+    setTimeout(() => window.location.href = '/Create/Create.html', 1800);
+}
+function redirguest(){
+    showToast("Redirecting...");
+    setTimeout(() => window.location.href = '/Home/home.html', 1800);
+}
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -15,11 +29,11 @@ form.addEventListener("submit", function(e) {
 
 
     if (validUser) {
-        alert("Login Successful!");
+        showToast("Login Successful!. Redirecting...");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
+        setTimeout(() => window.location.href = '/Home/home.html', 1800);
 
-        window.location.href = "/Home/home.html";
     } else {
-        alert("Invalid Login Credentials");
+        showToast("Invalid Login Credentials");
     }
 });

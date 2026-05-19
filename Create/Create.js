@@ -1,9 +1,17 @@
 const form = document.getElementById("create-form");
-
-
 const strengthBar = document.getElementById("password-strength-bar");
 const strengthText = document.getElementById("password-strength-text");
 
+function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
+    }
+function redirlogin(){
+    showToast("Redirecting...");
+    setTimeout(() => window.location.href = '/Login/login.html', 1800);
+}
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -14,7 +22,7 @@ form.addEventListener("submit", function(e) {
     const plan = "Free";
 
     if (password !== confirm) {
-        alert("Passwords do not match!");
+        showToast("Passwords do not match!");
         return;
     }
 
@@ -26,12 +34,12 @@ form.addEventListener("submit", function(e) {
         /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
     if (!strongPassword) {
-        alert("Password must be at least 8 characters and include uppercase, lowercase, number, and special character.");
+        showToast("Password must be at least 8 characters and include uppercase, lowercase, number, and special character.");
         return;
     }
 
     if (!email.includes("@") || !email.includes(".")) {
-        alert("Please enter a valid email address.");
+        showToast("Please enter a valid email address.");
         return;
     }
 
@@ -39,7 +47,7 @@ form.addEventListener("submit", function(e) {
 
     const exists = users.some(user => user.username === username || user.email === email);
     if (exists) {
-        alert("Username or email already in use. Try another.");
+        showToast("Username or email already in use. Try another.");
         return;
     }
 
@@ -61,8 +69,8 @@ form.addEventListener("submit", function(e) {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Account created! Welcome to FocusBoard 🎉");
-    window.location.href = "/Login/login.html";
+    showToast("Account created! Welcome to FocusBoard 🎉. Redirecting...");
+    setTimeout(() => window.location.href = '/Login/login.html', 1800);
 });
 
 document.getElementById("password").addEventListener("input", function() {

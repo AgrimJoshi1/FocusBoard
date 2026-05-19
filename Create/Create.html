@@ -20,7 +20,7 @@
         <h2>Join FocusBoard</h2>
         <p class="subtitle">Create your free account to get started</p>
 
-        <form id="create-form">
+        <form id="create-form" novalidate>
             <input type="text" id="username" placeholder="Choose a username" required>
             <input type="email" id="email" placeholder="Enter your email" required>
             <input type="password" id="password" placeholder="Create a password" required>
@@ -36,12 +36,12 @@
         </form>
 
         <p class="extra">
-            Already have an account? <a href="/Login/login.html">Log in</a>
+            Already have an account? <a onclick="redirlogin()">Log in</a>
         </p>
 
     </div>
 </div>
-
+<div class="toast" id="toast"></div>
 <script src="/Create/Create.js"></script>
 </body>
 </html>

@@ -18,10 +18,23 @@
   <span id="b-letter">B</span>oard
     </h1>
     <p>Organize your tasks. Stay focused.</p>
-    <a href="../Login/login.html"><button>Get Started</button></a>
+    <a onclick="start()"><button>Get Started</button></a>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <script>
+
+function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2800);
+    }
+function start (){
+    showToast('Redirecting...');
+    setTimeout(() => window.location.href = '/Login/login.html', 1800);
+}
 const f = document.getElementById("f-letter");
 const b = document.getElementById("b-letter");
 
