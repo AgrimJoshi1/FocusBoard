@@ -503,7 +503,6 @@ button:active {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 .toast {
     position: fixed;
     bottom: 30px;
@@ -524,8 +523,7 @@ button:active {
  
 .toast.show {
     opacity: 1;
-    transform: translateY(0);
-=======
+    transform: translateY(0);}
 /* GLOBAL HOVER EFFECT FOR PROFILE + BUTTONS */
 
 #user-name,
@@ -661,5 +659,4 @@ button:active,
     color: white !important;
     background: rgba(123,97,255,0.18) !important;
     box-shadow: 0 5px 18px rgba(123,97,255,0.3);
->>>>>>> 63f502e (debugging)
 }
