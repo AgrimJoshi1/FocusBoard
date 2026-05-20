@@ -92,7 +92,9 @@ input:checked + .slider::before {
 
 .hero {
     min-height: 80vh;
-    background: url('/Get-Started/additional/BIGVIG6.png') center/cover;
+    background:
+    url('../Get-Started/additional/BIGVID6.png')
+    center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,7 +283,9 @@ a{
 }
 .hero {
     height: 80vh;
-    background: url('/Get-Started/additional/BIGVIG6.png') center/cover no-repeat;
+    background:
+    url('../Get-Started/additional/BIGVID6.png')
+    center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,6 +324,7 @@ button:active {
     background-color: rgba(0, 0, 0, 0.15);
     
 }
+<<<<<<< HEAD
 .toast {
     position: fixed;
     bottom: 30px;
@@ -342,3 +347,5 @@ button:active {
     opacity: 1;
     transform: translateY(0);
 }
+=======
+>>>>>>> fe601bbcb0a42244c46574351b7b507c8b4d6dda
