@@ -92,7 +92,9 @@ input:checked + .slider::before {
 
 .hero {
     min-height: 80vh;
-    background: url('/Get-Started/additional/BIGVIG6.png') center/cover;
+    background:
+    url('../Get-Started/additional/BIGVID6.png')
+    center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,7 +283,9 @@ a{
 }
 .hero {
     height: 80vh;
-    background: url('/Get-Started/additional/BIGVIG6.png') center/cover no-repeat;
+    background:
+    url('../Get-Started/additional/BIGVID6.png')
+    center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
