@@ -500,3 +500,41 @@ button:active {
     cursor: pointer;
 }
 
+
+
+/* GLOBAL HOVER EFFECT FOR PROFILE + BUTTONS */
+
+#user-name,
+button,
+.nav-links a,
+.feature-box,
+.big-card,
+.footer-top > div,
+.footer-top p {
+    transition: all 0.3s ease;
+}
+
+/* UNIVERSAL HOVER GLOW */
+#user-name:hover,
+button:hover,
+.nav-links a:hover,
+.feature-box:hover,
+.big-card:hover,
+.footer-top > div:hover {
+    transform: translateY(-3px);
+    border-color: #7B61FF;
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.5);
+}
+
+/* TEXT HOVER */
+.footer-top p:hover,
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* PROFILE SPECIAL EFFECT */
+#user-name:hover {
+    background: rgba(123, 97, 255, 0.15);
+    border: 1px solid #7B61FF;
+    border-radius: 8px;
+}

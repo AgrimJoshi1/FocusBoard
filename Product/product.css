@@ -503,6 +503,7 @@ button:active {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .toast {
     position: fixed;
     bottom: 30px;
@@ -524,4 +525,141 @@ button:active {
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+=======
+/* GLOBAL HOVER EFFECT FOR PROFILE + BUTTONS */
+
+#user-name,
+button,
+.nav-links a,
+.feature-box,
+.big-card,
+.footer-top > div,
+.footer-top p {
+    transition: all 0.3s ease;
+}
+
+/* UNIVERSAL HOVER GLOW */
+#user-name:hover,
+button:hover,
+.nav-links a:hover,
+.feature-box:hover,
+.big-card:hover,
+.footer-top > div:hover {
+    transform: translateY(-3px);
+    border-color: #7B61FF;
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.5);
+}
+
+/* TEXT HOVER */
+.footer-top p:hover,
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* PROFILE SPECIAL EFFECT */
+#user-name:hover {
+    background: rgba(123, 97, 255, 0.15);
+    border: 1px solid #7B61FF;
+    border-radius: 8px;
+}
+
+/* =========================
+   GLOBAL BUTTON HOVER SYSTEM
+========================= */
+
+button,
+.nav-right button,
+.plan-card button,
+.hero button,
+.payment-actions button,
+.login-actions button,
+.logout-btn,
+.start-btn,
+.picker-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* MAIN HOVER EFFECT */
+button:hover,
+.nav-right button:hover,
+.plan-card button:hover,
+.hero button:hover,
+.payment-actions button:hover,
+.login-actions button:hover,
+.logout-btn:hover,
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.55);
+}
+
+/* CLICK EFFECT */
+button:active,
+.nav-right button:active,
+.plan-card button:active,
+.hero button:active,
+.payment-actions button:active,
+.login-actions button:active,
+.logout-btn:active,
+.start-btn:active {
+    transform: scale(0.96);
+}
+
+/* SOFT BUTTONS */
+.picker-btn:hover {
+    border-color: #7B61FF !important;
+    color: white !important;
+    background: rgba(123,97,255,0.18) !important;
+    box-shadow: 0 5px 18px rgba(123,97,255,0.3);
+}
+
+/* =========================
+   GLOBAL BUTTON HOVER SYSTEM
+========================= */
+
+button,
+.nav-right button,
+.plan-card button,
+.hero button,
+.payment-actions button,
+.login-actions button,
+.logout-btn,
+.start-btn,
+.picker-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* MAIN HOVER EFFECT */
+button:hover,
+.nav-right button:hover,
+.plan-card button:hover,
+.hero button:hover,
+.payment-actions button:hover,
+.login-actions button:hover,
+.logout-btn:hover,
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.55);
+}
+
+/* CLICK EFFECT */
+button:active,
+.nav-right button:active,
+.plan-card button:active,
+.hero button:active,
+.payment-actions button:active,
+.login-actions button:active,
+.logout-btn:active,
+.start-btn:active {
+    transform: scale(0.96);
+}
+
+/* SOFT BUTTONS */
+.picker-btn:hover {
+    border-color: #7B61FF !important;
+    color: white !important;
+    background: rgba(123,97,255,0.18) !important;
+    box-shadow: 0 5px 18px rgba(123,97,255,0.3);
+>>>>>>> 63f502e (debugging)
 }
