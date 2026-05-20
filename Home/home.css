@@ -53,7 +53,7 @@ body {
 
 .hero {
     height: 80vh;
-    background: url('/Get-Started/additional/BIGVID2.png') center/cover no-repeat;
+    background: url('../Get-Started/additional/BIGVID2.png') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
