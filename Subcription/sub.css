@@ -93,7 +93,7 @@ input:checked + .slider::before {
 .hero {
     min-height: 80vh;
     background:
-    url('/FocusBoard/Get-Started/additional/BIGVID1.png')
+    url('/Get-Started/additional/BIGVID1.png')
     center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -316,7 +316,7 @@ a{
 .hero {
     height: 80vh;
     background:
-    url('/FocusBoard/Get-Started/additional/BIGVID1.png')
+    url('/Get-Started/additional/BIGVID1.png')
     center/cover no-repeat;
     display: flex;
     justify-content: center;

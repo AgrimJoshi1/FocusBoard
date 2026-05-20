@@ -10,7 +10,7 @@ function showToast(msg) {
     }
 function redirlogin(){
     showToast("Redirecting...");
-    setTimeout(() => window.location.href = '../Login/login.html', 1800);
+    setTimeout(() => window.location.href = '/Login/login.html', 1800);
 }
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -70,7 +70,7 @@ form.addEventListener("submit", function(e) {
     localStorage.setItem("users", JSON.stringify(users));
 
     showToast("Account created! Welcome to FocusBoard 🎉. Redirecting...");
-    setTimeout(() => window.location.href = '../Login/login.html', 1800);
+    setTimeout(() => window.location.href = '/Login/login.html', 1800);
 });
 
 document.getElementById("password").addEventListener("input", function() {

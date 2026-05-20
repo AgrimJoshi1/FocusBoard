@@ -9,7 +9,7 @@ function showToast(msg) {
     }
 function redirsignup(){
     showToast("Redirecting...");
-    setTimeout(() => window.location.href = '../Create/Create.html', 1800);
+    setTimeout(() => window.location.href = '/Create/Create.html', 1800);
 }
 function redirguest(){
     if (currentUser){
@@ -18,7 +18,7 @@ function redirguest(){
     else{
     showToast("Redirecting...");
     }
-    setTimeout(() => window.location.href = '../Home/home.html', 1800);
+    setTimeout(() => window.location.href = '/Home/home.html', 1800);
 }
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -37,7 +37,7 @@ form.addEventListener("submit", function(e) {
     if (validUser) {
         showToast("Login Successful!. Redirecting...");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
-        setTimeout(() => window.location.href = '../Home/home.html', 1800);
+        setTimeout(() => window.location.href = '/Home/home.html', 1800);
 
     } else {
         showToast("Invalid Login Credentials");

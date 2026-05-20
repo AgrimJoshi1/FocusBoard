@@ -15,7 +15,7 @@ if (currentUser) {
 
 function logout() {
     localStorage.removeItem("currentUser");
-    window.location.href = "../Login/login.html";
+    window.location.href = "/Login/login.html";
 }
 
 function showToast(msg) {
