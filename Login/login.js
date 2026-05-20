@@ -37,7 +37,7 @@ form.addEventListener("submit", function(e) {
     if (validUser) {
         showToast("Login Successful!. Redirecting...");
         localStorage.setItem("currentUser", JSON.stringify(validUser));
-        setTimeout(() => window.location.href = '/Home/home.html', 1800);
+        setTimeout(() => window.location.href = '../Home/home.html', 1800);
 
     } else {
         showToast("Invalid Login Credentials");
