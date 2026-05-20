@@ -9,6 +9,16 @@ if (currentUser) {
     } else {
         document.getElementById("user-name").textContent = "👤 " + "Guest";
     }
+
+const analyticsContent = document.getElementById("analyticsContent");
+const analyticsPopup = document.getElementById("analyticsPopup");
+
+const membership = currentUser?.plan || "Free";
+
+if (membership === "Free") {
+    analyticsContent.classList.add("locked");
+    analyticsPopup.style.display = "block";
+}    
 function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";
@@ -397,4 +407,4 @@ renderTasks();
 renderTaskTimerUI();
 renderNotes();
 loadNote();
-updateAnalytics();
+updateAnalytics();z
