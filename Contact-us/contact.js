@@ -8,6 +8,12 @@ function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";
 }
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+}
 
 
 const form = document.querySelector(".contact-form");
@@ -27,7 +33,7 @@ form.addEventListener("submit", function (e) {
     let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
     contacts.push(contactData);
     localStorage.setItem("contacts", JSON.stringify(contacts));
-    alert("Your message has been sent successfully!");
+    showToast("Your message has been sent successfully!");
 
     form.reset();
 });

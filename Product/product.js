@@ -13,6 +13,12 @@ function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";
 }
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+}
 
 // TASK MANAGER
 let tasks = JSON.parse(localStorage.getItem("tasksData")) || [];
@@ -39,6 +45,7 @@ function addTask() {
     });
 
     taskInput.value = "";
+    showToast("Task added!");
     saveTasks();
     renderTasks();
     renderTaskTimerUI();
@@ -69,6 +76,7 @@ function toggleTask(index) {
     let users = JSON.parse(localStorage.getItem("users")) || [];
     if (!task.completed) {
         task.completed = true;
+        showToast("Task completed!");
         task.endTime = Date.now();
         if (currentUser) {
             const userIndex = users.findIndex(
@@ -86,6 +94,7 @@ function toggleTask(index) {
        
         task.completed = false;
         task.endTime = null;
+        showToast("Task marked active again");
     }
 
     saveTasks();
@@ -95,6 +104,7 @@ function toggleTask(index) {
 }
 
 function deleteTask(index) {
+    showToast("Task removed");
     tasks.splice(index, 1);
     saveTasks();
     renderTasks();
@@ -143,7 +153,7 @@ document.getElementById("startBtn").onclick = () => {
 
     if (time === 0) {
         let m = +minutesInput.value;
-        if (m <= 0) return alert("Enter valid minutes");
+        if (m <= 0) return showToast("Enter valid minutes");
 
         time = m * 60;
         updateTimer();
@@ -154,7 +164,7 @@ document.getElementById("startBtn").onclick = () => {
             clearInterval(timer);
             timer = null;
             display.textContent = "00:00";
-            alert("⏰ Time's up!");
+            showToast("Time's up!");
             return;
         }
 
@@ -188,7 +198,7 @@ document.getElementById("pomodoroBtn").onclick = () => {
             clearInterval(timer);
             timer = null;
             display.textContent = "00:00";
-            alert("Pomodoro complete! Starting 5 minute break...");
+            showToast("Pomodoro complete! Break started");
 
             time = 5 * 60;
             display.style.color = "#32dc78";
@@ -200,7 +210,7 @@ document.getElementById("pomodoroBtn").onclick = () => {
                     timer = null;
                     display.textContent = "00:00";
                     display.style.color = "white";
-                    alert("✅ Break over! Ready for the next Pomodoro?");
+                    showToast("Break over! Ready for next Pomodoro");
                     return;
                 }
                 time--;
@@ -298,6 +308,7 @@ function renderNotes() {
 
 addNoteBtn.onclick = () => {
     notes.push("");
+    showToast("New note created!");
     current = notes.length - 1;
     saveNotes();
     renderNotes();
@@ -312,9 +323,11 @@ notesInput.oninput = () => {
 clearBtn.onclick = () => {
     if (notes.length === 1) {
         notes[0] = "";
+        showToast("Note cleared");
     } else {
         notes.splice(current, 1);
         current = 0;
+        showToast("Note deleted");
     }
 
     saveNotes();
