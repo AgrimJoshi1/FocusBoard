@@ -324,3 +324,25 @@ button:active {
     background-color: rgba(0, 0, 0, 0.15);
     
 }
+.toast {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(123,97,255,0.15);
+    border: 1px solid #7B61FF;
+    backdrop-filter: blur(14px);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #c4b5fd;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 10000000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

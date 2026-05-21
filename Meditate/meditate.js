@@ -9,6 +9,10 @@ if (currentUser) {
     } else {
         document.getElementById("user-name").textContent = "👤 " + "Guest";
     }
+if(currentUser.plan === "Free"){
+    const Btn = document.getElementById("startBtn");
+    Btn.style.background = "#E6C15A";
+}    
 function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "/Login/login.html";
@@ -129,6 +133,9 @@ function startPhase() {
 
 /* ── session control ── */
 function toggleSession() {
+    if(currentUser.plan === "Free"){
+        return showToast("This Feature is only available for Pro & Premium only");
+    }
     if (running) {
         stopSession();
     } else {

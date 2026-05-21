@@ -12,10 +12,12 @@ if (currentUser) {
 
 const analyticsContent = document.getElementById("analyticsContent");
 const analyticsPopup = document.getElementById("analyticsPopup");
+const pomodoro = document.getElementById("pomodoroBtn");
 
 const membership = currentUser?.plan || "Free";
 
 if (membership === "Free") {
+    pomodoro.style.background = "#E6C15A";
     analyticsContent.classList.add("locked");
     analyticsPopup.style.display = "block";
 }    
@@ -24,10 +26,16 @@ function logout() {
     window.location.href = "/Login/login.html";
 }
 function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
+    let toast = document.getElementById('toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
 }
 
 // TASK MANAGER
@@ -197,6 +205,10 @@ document.getElementById("resetBtn").onclick = () => {
 };
 
 document.getElementById("pomodoroBtn").onclick = () => {
+    if (membership==="Free"){
+        return showToast("Pomodoro Timer is available for Pro & Premium only");
+        
+    }
     clearInterval(timer);
     timer = null;
     time = 25 * 60;
