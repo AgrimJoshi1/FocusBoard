@@ -665,3 +665,291 @@ button:active,
 }
 
 
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-title{
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .session-info{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 16px 24px;
+    }
+
+    .steps-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .breathe-main{
+        padding: 30px 15px 50px;
+        gap: 45px;
+    }
+
+    .page-title{
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .page-subtitle{
+        font-size: 0.8rem;
+    }
+
+    .breathing-wrapper{
+        gap: 40px;
+    }
+
+    .orb-container{
+        width: 170px;
+        height: 170px;
+    }
+
+    .ring-1{
+        width: 170px;
+        height: 170px;
+    }
+
+    .ring-2{
+        width: 210px;
+        height: 210px;
+    }
+
+    .ring-3{
+        width: 250px;
+        height: 250px;
+    }
+
+    .orb{
+        width: 140px;
+        height: 140px;
+    }
+
+    .phase-label{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .phase-count{
+        font-size: 1.6rem;
+    }
+
+    .box-diagram{
+        width: 200px;
+        height: 200px;
+    }
+
+    .box-corner{
+        width: 52px;
+        height: 52px;
+    }
+
+    .top-edge,
+    .bottom-edge{
+        left: 55px;
+        right: 55px;
+    }
+
+    .left-edge,
+    .right-edge{
+        top: 55px;
+        bottom: 55px;
+    }
+
+    .session-info{
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .info-divider{
+        display: none;
+    }
+
+    .controls{
+        gap: 20px;
+    }
+
+    .start-btn{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .picker-options{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .steps-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .step-card{
+        padding: 20px 16px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .login-box{
+        width: 95%;
+        padding: 25px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .page-title{
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .page-subtitle{
+        font-size: 0.75rem;
+    }
+
+    .orb-container{
+        width: 150px;
+        height: 150px;
+    }
+
+    .ring-1{
+        width: 150px;
+        height: 150px;
+    }
+
+    .ring-2{
+        width: 185px;
+        height: 185px;
+    }
+
+    .ring-3{
+        width: 220px;
+        height: 220px;
+    }
+
+    .orb{
+        width: 120px;
+        height: 120px;
+    }
+
+    .phase-label{
+        font-size: 0.9rem;
+    }
+
+    .phase-count{
+        font-size: 1.3rem;
+    }
+
+    .box-diagram{
+        width: 180px;
+        height: 180px;
+    }
+
+    .box-corner{
+        width: 46px;
+        height: 46px;
+    }
+
+    .corner-name{
+        font-size: 0.55rem;
+    }
+
+    .corner-num{
+        font-size: 0.85rem;
+    }
+
+    .top-edge,
+    .bottom-edge{
+        left: 49px;
+        right: 49px;
+    }
+
+    .left-edge,
+    .right-edge{
+        top: 49px;
+        bottom: 49px;
+    }
+
+    .start-btn{
+        padding: 12px 24px !important;
+        font-size: 0.85rem;
+    }
+
+    .picker-btn{
+        font-size: 0.72rem !important;
+        padding: 6px 14px !important;
+    }
+
+    .how-title{
+        font-size: 1.4rem;
+    }
+}

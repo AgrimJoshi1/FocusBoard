@@ -88,3 +88,83 @@ a {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    h1{
+        font-size: 34px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: 0 20px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h1{
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    p{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    button{
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    h1{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 13px;
+    }
+
+    button{
+        font-size: 14px;
+        padding: 11px;
+    }
+}
