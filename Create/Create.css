@@ -175,3 +175,29 @@ button:active {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.toggle-password:hover {
+    color: #b09fff;
+}

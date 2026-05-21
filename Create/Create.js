@@ -104,3 +104,13 @@ document.getElementById("password").addEventListener("input", function() {
         strengthText.textContent = "Strong Password";
     }
 });
+
+function togglePassword(inputId, icon) {
+    const input = document.getElementById(inputId);
+
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}

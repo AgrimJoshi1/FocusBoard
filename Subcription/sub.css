@@ -47,11 +47,12 @@ body {
 
 .nav-right a:hover {
     color: #7B61FF;
+    transform: scale(1.08);
 }
 
-.nav-right a:hover,
 .nav-right button:hover {
-    transform: scale(1.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }
 
 .switch {
@@ -506,7 +507,7 @@ button:active {
 
 #user-name,
 button,
-.nav-links a,
+.nav-right a,
 .feature-box,
 .big-card,
 .footer-top > div,
@@ -515,26 +516,22 @@ button,
 }
 
 /* UNIVERSAL HOVER GLOW */
-#user-name:hover,
 button:hover,
-.nav-links a:hover,
 .feature-box:hover,
 .big-card:hover,
 .footer-top > div:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     border-color: #7B61FF;
-    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.5);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }
 
 /* TEXT HOVER */
-.footer-top p:hover,
-.nav-links a:hover {
+.footer-top p:hover {
     color: #ffffff;
 }
 
 /* PROFILE SPECIAL EFFECT */
 #user-name:hover {
-    background: rgba(123, 97, 255, 0.15);
-    border: 1px solid #7B61FF;
-    border-radius: 8px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }

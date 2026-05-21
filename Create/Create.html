@@ -23,15 +23,26 @@
         <form id="create-form" novalidate>
             <input type="text" id="username" placeholder="Choose a username" required>
             <input type="email" id="email" placeholder="Enter your email" required>
-            <input type="password" id="password" placeholder="Create a password" required>
+            <div class="password-box">
+                 <input type="password" id="password" placeholder="Create a password" required>
+
+                <span class="toggle-password" onclick="togglePassword('password', this)">
+                 👁
+                 </span>
+            </div>
 
             <div class="password-strength-container">
             <div id="password-strength-bar"></div>
             </div>
             <p id="password-strength-text"></p>
 
-            <input type="password" id="confirm-password" placeholder="Confirm password" required>
+            <div class="password-box">
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
 
+                <span class="toggle-password" onclick="togglePassword('confirm-password', this)">
+                    👁
+                </span>
+            </div>
             <button type="submit">Create Account →</button>
         </form>
 

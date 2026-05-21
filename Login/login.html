@@ -22,7 +22,13 @@
 
         <form id="login-form">
             <input type="text" id="username" placeholder="Username or Email" required>
+         <div class="password-box">
             <input type="password" id="password" placeholder="Password" required>
+
+        <span class="toggle-password" onclick="togglePassword()">
+        👁
+        </span>
+        </div>
 
             <button type="submit">Login</button>
         </form>

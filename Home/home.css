@@ -31,24 +31,40 @@ body {
     z-index: 2000;;
 }
 
-.nav-links {
+.nav-right {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.nav-links a {
+.nav-right a {
     color: white;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-.nav-links button {
+.nav-right button {
     background: #7B61FF;
     border: none;
     padding: 8px 15px;
     border-radius: 6px;
     color: white;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-right a:hover {
+    color: #7B61FF;
+}
+
+.nav-right a:hover {
+    color: #7B61FF;
+    transform: scale(1.08);
+}
+
+.nav-right button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }
 
 .hero {
@@ -194,13 +210,8 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
-}
-
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.96);
 }
 #user-name{
     background-color: rgba(0, 0, 0, 0.15);
@@ -339,8 +350,8 @@ button:hover,
 .login-actions button:hover,
 .logout-btn:hover,
 .start-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.55);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }
 
 /* CLICK EFFECT */
