@@ -275,8 +275,6 @@ button:active {
 a{
     text-decoration: none;
 }
-<<<<<<< HEAD
-=======
 
 /* GLOBAL HOVER EFFECT FOR PROFILE + BUTTONS */
 
@@ -364,4 +362,3 @@ button:active,
     background: rgba(123,97,255,0.18) !important;
     box-shadow: 0 5px 18px rgba(123,97,255,0.3);
 }
->>>>>>> 63f502e (debugging)
