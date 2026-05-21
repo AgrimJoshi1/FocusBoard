@@ -428,7 +428,7 @@ a{
 .hero {
     height: 80vh;
     background:
-    url('/Get-Started/additional/BIGVIG6.png')
+    url('/Get-Started/additional/BIGVID7.png')
     center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -583,4 +583,217 @@ button:active {
 
 .analytics-lock-popup button:active {
     transform: scale(0.95);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-left,
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        height: 70vh;
+        padding: 40px 20px;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .tools{
+        padding: 30px 20px;
+    }
+
+    .tool-box{
+        width: 95%;
+        padding: 22px;
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .analytics-lock-popup{
+        width: 260px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-left,
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero{
+        height: auto;
+        min-height: 70vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero-content{
+        padding: 20px;
+    }
+
+    .tools{
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .tool-box{
+        width: 100%;
+        margin: 10px auto;
+        padding: 20px 16px;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+
+    .task-input{
+        flex-direction: column;
+    }
+
+    .task-input button{
+        width: 100%;
+    }
+
+    .timer-buttons{
+        flex-direction: column;
+    }
+
+    .timer-task{
+        grid-template-columns: 1fr;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .analytics-row{
+        grid-template-columns: 1fr;
+        gap: 5px;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    #notesTabs{
+        flex-wrap: wrap;
+    }
+
+    #minutesInput,
+    #notesInput{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .login-box{
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .analytics-lock-popup{
+        width: 85%;
+        padding: 20px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .hero h1{
+        font-size: 1.7rem;
+    }
+
+    .hero button{
+        width: 100%;
+    }
+
+    .tool-box{
+        padding: 18px 14px;
+    }
+
+    .tool-box h3{
+        font-size: 1rem;
+    }
+
+    #timerDisplay{
+        font-size: 1.5rem;
+    }
+
+    .task-input input,
+    #minutesInput,
+    #notesInput{
+        font-size: 0.85rem;
+    }
+
+    .timer-buttons button,
+    .task-input button,
+    #addNoteBtn,
+    #clearNotesBtn{
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    .analytics-lock-popup h2{
+        font-size: 1.2rem;
+    }
+
+    .analytics-lock-popup p{
+        font-size: 0.85rem;
+    }
 }

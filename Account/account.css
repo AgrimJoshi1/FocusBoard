@@ -569,3 +569,160 @@ button:active,
     background: rgba(123,97,255,0.18) !important;
     box-shadow: 0 5px 18px rgba(123,97,255,0.3);
 }
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-wrapper{
+        margin: 40px auto;
+    }
+
+    .stats-row{
+        flex-wrap: wrap;
+    }
+
+    .stat-box{
+        min-width: 220px;
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .btn-row{
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .page-header h1{
+        font-size: 2rem;
+    }
+
+    .page-header p{
+        font-size: 0.85rem;
+    }
+
+    .page-wrapper{
+        padding: 0 15px 60px;
+    }
+
+    .account-card{
+        padding: 22px;
+    }
+
+    .field-row{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stats-row{
+        flex-direction: column;
+    }
+
+    .stat-box{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .btn-row{
+        flex-direction: column;
+    }
+
+    .btn-row button{
+        width: 100%;
+    }
+
+    .toggle-row{
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .login-box{
+        width: 95%;
+        padding: 25px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .avatar-ring{
+        width: 90px;
+        height: 90px;
+        font-size: 2.2rem;
+    }
+
+    .page-header h1{
+        font-size: 1.7rem;
+    }
+
+    .account-card{
+        padding: 18px;
+    }
+
+    .field-input{
+        font-size: 0.85rem;
+    }
+
+    button{
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}

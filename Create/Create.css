@@ -201,3 +201,107 @@ button:active {
 .toggle-password:hover {
     color: #b09fff;
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    .login-box{
+        width: 340px;
+        padding: 30px;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .login-container{
+        padding: 30px 15px;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .login-box{
+        width: 100%;
+        max-width: 360px;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    .subtitle{
+        font-size: 0.8rem;
+    }
+
+    input{
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+    }
+
+    button{
+        font-size: 0.9rem;
+    }
+
+    .extra{
+        font-size: 13px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .login-box{
+        padding: 22px 16px;
+        border-radius: 12px;
+    }
+
+    .brand-badge span{
+        font-size: 0.62rem;
+        letter-spacing: 2px;
+        padding: 5px 12px;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+
+    input{
+        padding: 11px;
+    }
+
+    button{
+        padding: 11px;
+    }
+
+    .toggle-password{
+        right: 14px;
+        font-size: 13px;
+    }
+}

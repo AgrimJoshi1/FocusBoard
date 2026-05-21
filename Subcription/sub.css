@@ -535,3 +535,223 @@ button:hover,
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(123, 97, 255, 0.6);
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-left,
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        height: 70vh;
+        padding: 40px 20px;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .subscription{
+        padding: 50px 20px;
+    }
+
+    .subscription h1{
+        font-size: 2.2rem;
+    }
+
+    .plan-card{
+        width: 280px;
+        min-height: 400px;
+    }
+
+    .benefits{
+        padding: 60px 20px;
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-left,
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero{
+        height: auto;
+        min-height: 70vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero-content{
+        padding: 20px;
+    }
+
+    .subscription{
+        padding: 40px 15px;
+    }
+
+    .subscription h1{
+        font-size: 1.9rem;
+    }
+
+    .sub-text{
+        font-size: 0.9rem;
+    }
+
+    .plans{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan-card{
+        width: 100%;
+        max-width: 340px;
+        min-height: auto;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .benefits{
+        padding: 50px 15px;
+    }
+
+    .benefits h2{
+        font-size: 1.8rem;
+    }
+
+    .benefit-boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit{
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+    .payment-box,
+    .login-box{
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .payment-actions{
+        flex-direction: column;
+    }
+
+    .payment-actions button{
+        width: 100%;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .hero h1{
+        font-size: 1.7rem;
+    }
+
+    .hero button{
+        width: 100%;
+    }
+
+    .subscription h1{
+        font-size: 1.6rem;
+    }
+
+    .plan-card{
+        padding: 22px 16px;
+    }
+
+    .plan-card h2{
+        font-size: 1.3rem;
+    }
+
+    .price{
+        font-size: 1.3rem;
+    }
+
+    .benefits h2{
+        font-size: 1.5rem;
+    }
+
+    .benefit{
+        padding: 18px;
+    }
+
+    .payment-box h2{
+        font-size: 1.4rem;
+    }
+
+    .payment-box p{
+        font-size: 0.9rem;
+    }
+
+    .payment-box input,
+    .payment-box select{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
