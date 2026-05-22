@@ -4,7 +4,7 @@
 
 (function () {
 
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 const MODEL = "arcee-ai/trinity-large-thinking:free";
 
 function getCurrentPage() {
