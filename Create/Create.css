@@ -2,8 +2,8 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
     
 }
 
@@ -72,7 +72,8 @@ h2 {
 }
 
 input {
-    width: 93%;
+    width: 100%;
+    box-sizing: border-box;
     padding: 12px;
     margin: 10px 0;
     border: none;
