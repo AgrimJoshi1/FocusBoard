@@ -470,3 +470,199 @@ button:active,
         padding:25px;
     }
 }
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero{
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .hero h1{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .hero p{
+        text-align: center;
+    }
+
+    .features{
+        gap: 20px;
+        padding: 50px 20px;
+    }
+
+    .feature-box{
+        width: 220px;
+    }
+
+    .card-container{
+        padding: 0 20px;
+    }
+
+    .big-card{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .stats{
+        gap: 20px;
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .nav-right{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero{
+        height: auto;
+        min-height: 70vh;
+        padding: 40px 20px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 0.95rem;
+    }
+
+    .features{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .feature-box{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .big-card{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .stats{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .stat{
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .cta{
+        padding: 40px 20px;
+    }
+
+    .about{
+        padding: 50px 20px;
+    }
+
+    .about-content{
+        padding: 25px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .toast{
+        width: 85%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 420px){
+
+    .hero h1{
+        font-size: 1.7rem;
+    }
+
+    .hero p{
+        font-size: 0.85rem;
+    }
+
+    .feature-box{
+        padding: 20px;
+    }
+
+    .big-card{
+        padding: 20px;
+    }
+
+    .about h2{
+        font-size: 1.8rem;
+    }
+
+    .about-main{
+        font-size: 1rem;
+    }
+}
