@@ -178,12 +178,18 @@ input:focus {
     body{
         overflow-x: hidden;
         overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
     }
 
-    .login-container{
-        padding: 30px 15px;
+     .login-container{
+
         min-height: 100vh;
-        height: auto;
+
+        padding: 30px 15px;
+
+        box-sizing: border-box;
+
     }
 
     .login-box{
