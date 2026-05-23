@@ -6,6 +6,10 @@ body {
     overflow: hidden;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 #bg-video {
     position: fixed;
     top: 0;
@@ -31,7 +35,6 @@ body::after {
     height: 100%;
 }
 
-
 .login-box {
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
@@ -52,9 +55,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 input {
-    width: 93%;
+    width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: none;
@@ -62,8 +64,8 @@ input {
     outline: none;
     background: rgba(255, 255, 255, 0.07);
     color: white;
+    box-sizing: border-box;
 }
-
 
 button {
     width: 100%;
@@ -92,6 +94,7 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 input:focus {
     outline: 2px solid #7B61FF;
 }
@@ -118,6 +121,7 @@ input:focus {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
 .password-box {
     position: relative;
     width: 100%;
